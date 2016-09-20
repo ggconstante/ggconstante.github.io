@@ -1,0 +1,72 @@
+This document shows which elements are available to the user when creating /
+a text file for the static site generator. If unknown elements are used / 
+site will not work properly, so check your spelling.
+
+All elements begin with a TAG IDENTIFIER (##). For example:
+
+    ## Header
+
+If the tag identifier is not included, the word "Header" will be included /
+in the site's content. After the tag indentifier, include the content you /
+want on the site on a new line. For example:
+
+    ## Header
+    Site Title
+
+Tag identifiers can have optional attributes that will slightly change how /
+the element will be seen on the website. For example:
+
+    ## Header, medium
+    Valid example:
+        ## Header, medium
+
+
+Some tag identifiers require custom information, this can be seen with () /
+This information must be included with the tag identifier to be valid /
+For example:
+    
+    ## Quote, (person)
+    Valid example:
+        ## Quote, Brian Kernighan
+        Hello, world
+
+Once finished with the content for a tag identifier, skip one line before /
+adding another tag identifier. For example:
+
+    ## Header
+    My Static Site
+
+    ## PP
+    Lorem ipsum    
+
+
+Below is a list of the elements available to the user with a brief description /
+on how the element will be formated. 
+
+## Title                        -Title of the website
+
+## Header                       -A large header in the center of the page
+    ## Header, medium               -A medium size header in the center
+    ## Header, small                -A small size header in the center
+
+## PP                           -A paragraph left-aligned
+    ## PP, centered                 -A paragraph center-aligned
+    ## PP, right                    -A paragraph center-aligned
+
+## List                         -A plain list
+    ## List, dotted                 -A list with dots
+    ## List, number                 -A numbered list
+
+## Quote                        -A blockquote
+    ## Quote, (person)                -A blockquote with credit, must insert person's name
+
+## Link, (URL), (text)          -A hyperlink to another page, must insert valid URL, must insert text to be clicked on          
+
+
+
+
+
+
+
+
+
