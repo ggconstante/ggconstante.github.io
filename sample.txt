@@ -1,0 +1,34 @@
+## Title
+Static Website
+
+## Header
+Sample Capstone Header
+
+## Header, medium
+Ging
+
+## PP
+Ging is a total badass. He will beat you at basketball.
+
+## PP
+Lorem ipsum dolor sit amet, in diceret equidem percipit mei, et pri soluta aperiri. Eos liber causae id, cu mea quas disputando. No solum vulputate sea, prima inani volumus at nec, inermis adipiscing cum at. Magna causae ea nec.
+
+## Header, medium
+Albert
+
+## PP
+Albert does not like how dumb github can be. But he likes making lists.
+
+## PP
+Lorem ipsum dolor sit amet, in diceret equidem percipit mei, et pri soluta aperiri. Eos liber causae id, cu mea quas disputando. No solum vulputate sea, prima inani volumus at nec, inermis adipiscing cum at. Magna causae ea nec.
+
+## List
+Almonds
+Cashews
+Walnuts
+Peanuts
+
+## Quote, Gingrefel Constante
+Know where you're going and know where to stop.
+
+## Link, https://d2l.arizona.edu/, D2L Site
