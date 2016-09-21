@@ -1,0 +1,167 @@
+body
+{
+
+   
+   /* Provide multiple background images/gradients for modern browsers */
+   background-image:-webkit-linear-gradient(#044C74 0%, rgba(123,158,177,0.85) 5%), url('../images/final.png');
+   background-image:-moz-linear-gradient(#044C74 0%, rgba(123,158,177,0.85) 5%), url('../images/final.png');
+   background-image:-o-linear-gradient(#044C74 0%, rgba(123,158,177,0.85) 5%), url('../images/final.png');
+   background-image:-ms-linear-gradient(#044C74 0%, rgba(123,158,177,0.85) 5%), url('../images/final.png');
+  
+   background-color:white;
+   
+   font-family:"Times New Roman",Georgia,Serif;
+   padding:0;
+   margin:0;
+   width:100%;
+}
+
+/* this is the Oceanic Airlines message */
+h1{
+   text-align:center;
+   font-family:times, sans-serif;
+  
+   
+   /*** Fahrner Image Replacement ***/
+   background-image:url("../images/circlelogo.png");
+   background-repeat:no-repeat;
+   background-position:30% 0;
+   height:72px;
+   margin:3% auto;
+   padding-top:2%;
+   text-shadow:3px 3px 10px #E9F2F9;
+   
+ 
+  
+}
+/* this is the end Oceanic Airlines message */
+
+/* this wraps the whole content */
+#wrapper
+{
+   width:71%;
+   margin:0 auto;
+   border-radius:25px;
+}
+
+.navy{
+ height:72px;
+ border-radius:25px;
+
+ 
+}
+.navy li{
+margin:0 auto;
+}
+
+.moreTravelA{
+color:#9D201E;
+}
+/* end of wrapper */
+
+/*** Begin general content styles ***/
+#content
+{
+   background-color:#9FC2D6; /* this is the color starting from welcome */
+   padding:3%;
+   border-radius:2px;
+   
+   
+}
+/* this is your island image */
+#content #image{
+	width:800px;
+	margin:0 auto;
+	display:block;
+	margin-top:2%; /* this is to move up your main photo */
+	border-radius:25px;
+}
+
+
+#content h2
+{
+   margin-top:3%;
+   font-family:Georgia, serif;
+}
+/*** End general content styles ***/
+
+/*** Begin footer styles ***/
+#footer
+{
+   font-style:italic;
+   background-color:#B8D0DE ;
+   text-align:center;
+   border-bottom-left-radius:25px;
+   border-bottom-right-radius:25px;
+   margin-bottom:3%;
+   font-size:80%;
+}
+/*
+ * Remove margin and padding from all lists AND list items.
+ */
+
+#header{
+	margin-top:5px; /* dont touch this */
+	padding:4% 0; /* this will move down the nav bar */
+	background-color:#6792AB;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	height:60px;
+	
+}
+#nav, #nav ul, #nav li
+{
+   padding:0;
+   margin:0;
+  }
+/*
+ * Remove bullets from all list items.
+ */
+#nav li
+{
+   list-style-type:none;
+   background-color:#E2E1F0;
+   height:40px;
+  /*  margin-top:80px; */
+   border-radius:25px 25px 0 0;
+   text-align:center;
+   float:left;
+   width:20%;
+   background-image:-webkit-linear-gradient(#F38630 0%, rgba(255,255,255,0.85) 80%); 
+  
+   
+   /* margin:0 auto;  *//* this is okay if you can make it go up */
+ 
+ 
+ margin-top:60px;
+ margin-bottom:20px;
+
+ 
+}
+
+#nav a{
+text-decoration:none; /* this is fix */
+} 
+#nav li:hover
+{
+	height:80px; /* this is fix just need to go up the top */
+	background-color:white; /* this is fix */
+	margin-top:20px;
+	
+	 background-repeat:no-repeat; 
+	 background-position:bottom center; 
+
+	 background-image:url("../images/circlelogo.png");
+	 transition-delay: .5s;
+	 
+
+
+}
+
+
+
+
+
+
+
+
