@@ -5,7 +5,7 @@
 ##################### comment each line please ########################
 def main():
     # this will read the file
-    file = open("Elements.txt", "r") # r means to read the file
+    file = open("sample.txt", "r") # r means to read the file
     # readlines will also process each line separately 
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
