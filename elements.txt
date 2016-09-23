@@ -45,12 +45,15 @@ on how the element will be formated.
 
 ## Title                        -Title of the website
 
-## Header                       -A large header in the center of the page
-    ## Header, medium               -A medium size header in the center
-    ## Header, small                -A small size header in the center
+## Header                       -A large header to the left of the page
+    ## Header, medium               -A medium size header to the left
+    ## Header, small                -A small size header to the left
+    ## Header, center               -A large header in the center of the page
+    ## Header, medium, center       -A medium size header in the center
+    ## Header, small, center        -A small size header in the center
 
 ## PP                           -A paragraph left-aligned
-    ## PP, centered                 -A paragraph center-aligned
+    ## PP, center                   -A paragraph center-aligned
     ## PP, right                    -A paragraph center-aligned
 
 ## List                         -A plain list
