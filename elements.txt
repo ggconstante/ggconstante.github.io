@@ -43,24 +43,24 @@ adding another tag identifier. For example:
 Below is a list of the elements available to the user with a brief description /
 on how the element will be formated. 
 
-## Title                        -Title of the website
+## Title(h1)                        -Title of the website
 
-## Header                       -A large header to the left of the page
-    ## Header, medium               -A medium size header to the left
-    ## Header, small                -A small size header to the left
-    ## Header, center               -A large header in the center of the page
-    ## Header, medium, center       -A medium size header in the center
-    ## Header, small, center        -A small size header in the center
+## Header(h1)                       -A large header to the left of the page
+    ## Header, medium(h2)               -A medium size header to the left
+    ## Header, small(h3)                -A small size header to the left
+    ## Header, center(h1)               -A large header in the center of the page
+    ## Header, medium, center(h2)       -A medium size header in the center
+    ## Header, small, center(h3)        -A small size header in the center
 
-## PP                           -A paragraph left-aligned
+## PP(p)                           -A paragraph left-aligned
     ## PP, center                   -A paragraph center-aligned
     ## PP, right                    -A paragraph center-aligned
 
-## List                         -A plain list
-    ## List, dotted                 -A list with dots
-    ## List, number                 -A numbered list
+## List(ul without dots)                         -A plain list
+    ## List, dotted(ul)                 -A list with dots
+    ## List, number(ol)                 -A numbered list
 
-## Quote                        -A blockquote
+## Quote(blockquote)                        -A blockquote
     ## Quote, (person)                -A blockquote with credit, must insert person's name
 
 ## Link, (URL), (text)          -A hyperlink to another page, must insert valid URL, must insert text to be clicked on          
