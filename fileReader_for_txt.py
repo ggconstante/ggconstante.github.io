@@ -14,7 +14,7 @@ def main():
 
     # to look for patterns
     for everyline in lines:
-        everyline = everyline.strip() # this will remove the extra spaces between lines
+        everyline = everyline.strip().split() # this will remove the extra spaces between lines
         print (everyline)
     # display result 
 main()
