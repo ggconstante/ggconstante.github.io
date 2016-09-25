@@ -6,17 +6,27 @@ body{
     color: white;
 }
 
+header { 
+   color: #536878;
+}
+
 a {
-   color: #0f0;
+   color: #36454f;
 }
 
 a:hover{
     font-weight: bold;
 }
 
+blockquote footer{
+   background-color: #6e7f80;
+   color: white;
+}
+
 footer{
     text-align: center;
     width: 100%;
+    background-color: #536872;
 }
 
 /* ###########################################################################
