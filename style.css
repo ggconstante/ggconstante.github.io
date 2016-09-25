@@ -16,8 +16,6 @@ a:hover{
 
 footer{
     text-align: center;
-    background-color: #CF5300;
-    color: #E7E7E7;
     position: absolute;
     width: 100%;
 }
@@ -34,7 +32,6 @@ Mobile
     
     footer{
         text-align: center;
-        background-color: #CF5300;
         color: #E7E7E7;
     }
 }
