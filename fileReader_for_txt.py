@@ -2,6 +2,8 @@
 # this demonstrates how to read a file and 
 # parse it using python
 
+# import the HTMLParser module
+from HTMLParser import HTMLParser
 ##################### comment each line please ########################
 def main():
     # this will read the file
