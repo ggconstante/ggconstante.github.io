@@ -13,6 +13,6 @@ def main():
     # to look for patterns
     for everyline in lines:
         everyline = everyline.strip() # this will remove the extra spaces between lines
-        print (everyline)
+        print "Everything is working"
     # display result 
 main()
