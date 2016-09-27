@@ -51,11 +51,21 @@ def main():
     #     HTMLcontents = html_file.write()
     #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
-    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title></head>'
+    html_message = ('<!DOCTYPE html><html>'
+    				'<head>'
+    				'<title>Needs a Title Here Senior</title>'
+    				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
+    				'<script src ="capstone.js"></script>'
+    				'</head>'
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
                     '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
                     'Useless people</a></center>'
+                    '<div>'
+					'<div id ="fontIncrease"><p><center><strong>Capstone Bigger Options!!!</strong></center></p></div>'
+					'<!-- this is to increase the font size-->' 
+					'<center><button onclick="increaseButton();">Enlarge me Darling!!!</button></center>'
+					'</div>'
                     '</body></html>')
     
     html_file.write(html_message)
