@@ -61,13 +61,17 @@ def main():
 
     # to look for tag identifiers
     for everyline in lines:
-        everyline = everyline.strip() # this will remove the extra spaces between lines
-        print(everyline)
+        line = everyline.strip('\n') # this will remove the extra spaces between lines
+        for i in range(len(line)):
+            if line[i] == "## Title":
+                parsedTitle = line[i+1]
+            print(parsedTitle)
 
-        # if str(everyline.startswith("##"):
-        #     everyline = everyline[3:]
-        #     taglist = everyline.split(",")
-        #     htmlitem = taglist[0]
+
+
+            # tagline = everyline[3:]
+            # taglist = tagline.split(",")
+            # htmlitem = taglist[0]
             # print(htmlitem)
 
     # display result 
