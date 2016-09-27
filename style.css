@@ -8,6 +8,7 @@ body{
 
 header { 
    color: #536878;
+   background-color: #fefefe;
 }
 
 a {
@@ -21,12 +22,15 @@ a:hover{
 blockquote footer{
    background-color: #6e7f80;
    color: white;
+   height: inherit; 
 }
 
 footer{
     text-align: center;
     width: 100%;
     background-color: #536872;
+    height: 50px;
+    margin-top: 3%;
 }
 
 /* ###########################################################################

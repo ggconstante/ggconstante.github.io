@@ -59,18 +59,16 @@ def main():
     html_file.close()
     
 
-    # # to look for patterns
-    # for everyline in lines:
-    #     everyline = everyline.strip().split() # this will remove the extra spaces between lines
-    #     print (everyline)
-    #     everyline = everyline.strip() # this will remove the extra spaces between lines
-    #     # print(everyline)
+    # to look for tag identifiers
+    for everyline in lines:
+        everyline = everyline.strip() # this will remove the extra spaces between lines
+        print(everyline)
 
-    #     if everyline.startswith("##"):
-    #         everyline = everyline[3:]
-    #         taglist = everyline.split(",")
-    #         htmlitem = taglist[0]
-    #         print(htmlitem)
+        # if str(everyline.startswith("##"):
+        #     everyline = everyline[3:]
+        #     taglist = everyline.split(",")
+        #     htmlitem = taglist[0]
+            # print(htmlitem)
 
     # display result 
 main()
