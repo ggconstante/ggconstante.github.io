@@ -52,7 +52,8 @@ def main():
     #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
 
-    html_message = "<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title></head><body><p>Hello Capstone 2016</p></body></html>"
+    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
+                    '</head><body><p>Hello Capstone 2016</p></body></html>')
     
     html_file.write(html_message)
     html_file.close()
