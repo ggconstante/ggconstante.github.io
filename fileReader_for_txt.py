@@ -49,11 +49,15 @@ def main():
     html_file = open("test.html", "w")
     # if html_file.mode == "w":
     #     HTMLcontents = html_file.write()
-    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'
+    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
-
     html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
-                    '</head><body><p>Hello Capstone 2016</p></body></html>')
+                    '<link rel="stylesheet" type="text/css" href="style.css"></head>'
+                    '<body>'
+                    '<p><center><strong>Hello Capstone 2016</strong></center></p>'
+                    '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
+                    'Useless people</a></center>'
+                    '</body></html>')
     
     html_file.write(html_message)
     html_file.close()
@@ -61,20 +65,30 @@ def main():
 
     # to look for tag identifiers
     for everyline in lines:
-        line = everyline.strip('\n') # this will remove the extra spaces between lines
-        for i in range(len(line)):
-            if line[i] == "## Title":
-                parsedTitle = line[i+1]
-            print(parsedTitle)
+        everyline = everyline.strip('\n') # this will remove the extra spaces between lines
 
+        if everyline.startswith("##"):
+            tagline = everyline[3:]
+            taglist = tagline.split(',')
 
-
-            # tagline = everyline[3:]
-            # taglist = tagline.split(",")
-            # htmlitem = taglist[0]
-            # print(htmlitem)
+        else:
+            content = everyline.strip()
+            taglist.append(content)
+            # print(taglist)
+            
+            if taglist[0] == "Title":
+                parsedTitle = taglist[1]
+                print(parsedTitle)
+                break
 
     # display result 
+
+
+
+
+
+
+
 main()
 
 if __name__ == "__main__":
