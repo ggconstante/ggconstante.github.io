@@ -49,11 +49,14 @@ def main():
     html_file = open("test.html", "w")
     # if html_file.mode == "w":
     #     HTMLcontents = html_file.write()
-    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'
+    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
-
-    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
-                    '</head><body><p>Hello Capstone 2016</p></body></html>')
+    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title></head>'
+                    '<body>'
+                    '<p><center><strong>Hello Capstone 2016</strong></center></p>'
+                    '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
+                    'Useless people</a></center>'
+                    '</body></html>')
     
     html_file.write(html_message)
     html_file.close()
