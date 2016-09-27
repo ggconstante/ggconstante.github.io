@@ -51,12 +51,17 @@ def main():
     #     HTMLcontents = html_file.write()
     #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
+<<<<<<< HEAD
     html_message = ('<!DOCTYPE html><html>'
     				'<head>'
     				'<title>Needs a Title Here Senior</title>'
     				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
     				'<script src ="capstone.js"></script>'
     				'</head>'
+=======
+    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
+                    '<link rel="stylesheet" type="text/css" href="style.css"></head>'
+>>>>>>> 4291b889ea6c09213485bf01427eadde548b4020
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
                     '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
@@ -72,20 +77,32 @@ def main():
     html_file.close()
     
 
-    # # to look for patterns
-    # for everyline in lines:
-    #     everyline = everyline.strip().split() # this will remove the extra spaces between lines
-    #     print (everyline)
-    #     everyline = everyline.strip() # this will remove the extra spaces between lines
-    #     # print(everyline)
+    # to look for tag identifiers
+    for everyline in lines:
+        everyline = everyline.strip('\n') # this will remove the extra spaces between lines
 
-    #     if everyline.startswith("##"):
-    #         everyline = everyline[3:]
-    #         taglist = everyline.split(",")
-    #         htmlitem = taglist[0]
-    #         print(htmlitem)
+        if everyline.startswith("##"):
+            tagline = everyline[3:]
+            taglist = tagline.split(',')
+
+        else:
+            content = everyline.strip()
+            taglist.append(content)
+            # print(taglist)
+            
+            if taglist[0] == "Title":
+                parsedTitle = taglist[1]
+                print(parsedTitle)
+                break
 
     # display result 
+
+
+
+
+
+
+
 main()
 
 if __name__ == "__main__":
