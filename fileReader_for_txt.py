@@ -51,17 +51,17 @@ def main():
     #     HTMLcontents = html_file.write()
     #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
-<<<<<<< HEAD
+# <<<<<<< HEAD
     html_message = ('<!DOCTYPE html><html>'
     				'<head>'
     				'<title>Needs a Title Here Senior</title>'
     				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
     				'<script src ="capstone.js"></script>'
-    				'</head>'
-=======
+    				'</head>')
+    print(html_message)
+
     html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
->>>>>>> 4291b889ea6c09213485bf01427eadde548b4020
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
                     '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
@@ -74,7 +74,6 @@ def main():
                     '</body></html>')
     
     html_file.write(html_message)
-    html_file.close()
     
 
     # to look for tag identifiers
@@ -85,7 +84,7 @@ def main():
             tagline = everyline[3:]
             taglist = tagline.split(',')
 
-        else:
+        elif everyline:
             content = everyline.strip()
             taglist.append(content)
             # print(taglist)
@@ -93,17 +92,18 @@ def main():
             if taglist[0] == "Title":
                 parsedTitle = taglist[1]
                 print(parsedTitle)
-                break
+                
+        else:
+            html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
 
     # display result 
 
+    html_file.close()
 
 
 
 
 
-
-main()
 
 if __name__ == "__main__":
     main();
