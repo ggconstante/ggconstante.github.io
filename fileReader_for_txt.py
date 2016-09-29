@@ -14,7 +14,7 @@ def main():
 
 
     #### this is where the dictionary starts########
-    def tag_Maker():
+    # def tag_Maker():
 
     # instantiate parser and feed it some HTML
     # parserHTML = MyHTMLParser()
@@ -24,27 +24,28 @@ def main():
     #     HTMLcontents = html_file.write()
     #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
     #                     '<body><h1>Parse me Darling!</h1><body></html>')
-    html_message = ('<!DOCTYPE html><html>'
-    				'<head>'
-    				'<title>Needs a Title Here Senior</title>'
-    				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
-    				'<script src ="capstone.js"></script>'
-    				'</head>')
 
-    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
+    html_message = ('<!DOCTYPE html>'
+                    '<html>'
+                    '<head>'
+                    '<title>Needs a Title Here Senior</title>'
+                    '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
+                    '<script src ="capstone.js"></script>'
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
                     '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
                     'Useless people</a></center>'
                     '<div>'
-					'<div id ="fontIncrease"><p><center><strong>Capstone Bigger Options!!!</strong></center></p></div>'
-					'<!-- this is to increase the font size-->' 
-					'<center><button onclick="increaseButton();">Enlarge me Darling!!!</button></center>'
-					'</div>'
-                    '</body></html>')
-    
+                    '<div id ="fontIncrease"><p>Make me Bigger!!!</p></div>'
+                    '<!-- this is to increase the font size-->' 
+                    '<button onclick="increaseButton();">Embiggen</button>'
+                    '</div>'
+                    '</body>'
+                    '</html>')
+ 
     html_file.write(html_message)
+    html_file.close()
     
 
     # to look for tag identifiers
@@ -64,12 +65,11 @@ def main():
                 parsedTitle = taglist[1]
                 print(parsedTitle)
                 
-        else:
-            html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
+        # else:
+        #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
 
     # display result 
 
-    html_file.close()
 
 
 
