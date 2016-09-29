@@ -12,7 +12,6 @@ def main():
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
 
-
     dict_tag = {'Title':'title', 'Header': 'h1','Header-medium':'h2','Header-small':'h3',
                 'Header-center':['h1', 'style="text-align:center;"'], 'Header-medium-center':['h2', 'style="text-align:center;"'],
                 'Header-small-center':['h3', 'style="text-align:center;"'], 'PP':'p', 'PP-center':['p', 'style="text-align:center;"'],
@@ -22,16 +21,28 @@ def main():
 
     # open test.html and write to it
     html_file = open("test.html", "w")
- 
-    # html_message = ('<!DOCTYPE html><html>'
-    # 				'<head>'
-    # 				'<title>Needs a Title Here Senior</title>'
-    # 				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
-    # 				'<script src ="capstone.js"></script>'
-    # 				'</head>')
-    # print(html_message)
 
     html_message = ('<!DOCTYPE html>\n<html>\n<head><title>Needs a Title Here Senior</title>'
+
+    #### this is where the dictionary starts########
+    def tag_Maker():
+
+    # instantiate parser and feed it some HTML
+    # parserHTML = MyHTMLParser()
+    # open test.html and write to it
+    html_file = open("test.html", "w")
+    # if html_file.mode == "w":
+    #     HTMLcontents = html_file.write()
+    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
+    #                     '<body><h1>Parse me Darling!</h1><body></html>')
+    html_message = ('<!DOCTYPE html><html>'
+    				'<head>'
+    				'<title>Needs a Title Here Senior</title>'
+    				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
+    				'<script src ="capstone.js"></script>'
+    				'</head>')
+
+    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
