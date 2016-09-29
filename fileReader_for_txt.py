@@ -30,7 +30,6 @@ def main():
     				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
     				'<script src ="capstone.js"></script>'
     				'</head>')
-    print(html_message)
 
     html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
