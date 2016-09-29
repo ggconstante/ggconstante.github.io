@@ -61,9 +61,11 @@ on how the element will be formated.
     ## List-number(ol)                 -A numbered list
 
 ## Quote(blockquote)                        -A blockquote
-    ## Quote, (person)                -A blockquote with credit, must insert person's name
+    ## Quote-person                -A blockquote with credit, must insert person's name 
+    (name)
 
-## Link, (URL), (text)          -A hyperlink to another page, must insert valid URL, must insert text to be clicked on          
+## Link           -A hyperlink to another page, must insert valid URL, must insert text to be clicked           
+(URL), (text)
 
 
 

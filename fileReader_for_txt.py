@@ -12,23 +12,26 @@ def main():
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
 
-    # instantiate parser and feed it some HTML
-    # parserHTML = MyHTMLParser()
+
+    dict_tag = {'Title':'title', 'Header': 'h1','Header-medium':'h2','Header-small':'h3',
+                'Header-center':['h1', 'style="text-align:center;"'], 'Header-medium-center':['h2', 'style="text-align:center;"'],
+                'Header-small-center':['h3', 'style="text-align:center;"'], 'PP':'p', 'PP-center':['p', 'style="text-align:center;"'],
+                'PP-right':['p', 'style="text-align:right;"'], 'List':['ul', 'style="list-style-type:none;"', 'li'],
+                'List-dotted':['ul', 'li'],'List-number':['ol', 'li'], 'Quote': 'blockquote', 'Quote-person': ['blockquote', 'footer'],
+                'Link':'a'}
+
     # open test.html and write to it
     html_file = open("test.html", "w")
-    # if html_file.mode == "w":
-    #     HTMLcontents = html_file.write()
-    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
-    #                     '<body><h1>Parse me Darling!</h1><body></html>')
-    html_message = ('<!DOCTYPE html><html>'
-    				'<head>'
-    				'<title>Needs a Title Here Senior</title>'
-    				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
-    				'<script src ="capstone.js"></script>'
-    				'</head>')
-    print(html_message)
+ 
+    # html_message = ('<!DOCTYPE html><html>'
+    # 				'<head>'
+    # 				'<title>Needs a Title Here Senior</title>'
+    # 				'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
+    # 				'<script src ="capstone.js"></script>'
+    # 				'</head>')
+    # print(html_message)
 
-    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
+    html_message = ('<!DOCTYPE html>\n<html>\n<head><title>Needs a Title Here Senior</title>'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
@@ -49,20 +52,22 @@ def main():
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
 
         if everyline.startswith("##"):
-            tagline = everyline[3:]
-            taglist = tagline.split(',')
+            tag = everyline[3:]
 
         elif everyline:
             content = everyline.strip()
-            taglist.append(content)
-            # print(taglist)
-            
-            if taglist[0] == "Title":
-                parsedTitle = taglist[1]
-                print(parsedTitle)
                 
         else:
-            html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
+            if tag in dict_tag:
+                new_tag = dict_tag[tag]
+                
+                if isinstance(new_tag, list):
+                    html_tag = new_tag[0]
+                else:
+                    html_tag = new_tag
+
+                # print(html_tag)
+            html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
     # display result 
 

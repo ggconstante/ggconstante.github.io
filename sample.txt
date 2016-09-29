@@ -28,7 +28,9 @@ Cashews
 Walnuts
 Peanuts
 
-## Quote, Gingrefel Constante
+## Quote-person
+Gingrefel Constante
 Know where you're going and know where to stop.
 
-## Link, https://d2l.arizona.edu/, D2L Site
+## Link 
+https://d2l.arizona.edu/, D2L Site
