@@ -24,26 +24,28 @@ def main():
     hard_tags = ['Header-center','Header-medium-center','Header-small-center','PP-center','PP-right','List','List-dotted','List-number'
                 'Quote-person']   
 
-
-    # def tag_maker():
-
-
     # open test.html and write to it
     html_file = open("test.html", "w")
 
-    html_message = ('<!DOCTYPE html><html><head><title>Needs a Title Here Senior</title>'
+    html_message = ('<!DOCTYPE html>'
+                    '<html>'
+                    '<head>'
+                    '<title>Needs a Title Here Senior</title>'
+                    '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
                     '<link rel="stylesheet" type="text/css" href="style.css"></head>'
+                    '<script src ="capstone.js"></script>'
                     '<body>'
                     '<p><center><strong>Hello Capstone 2016</strong></center></p>'
                     '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
                     'Useless people</a></center>'
                     '<div>'
-					'<div id ="fontIncrease"><p><center><strong>Capstone Bigger Options!!!</strong></center></p></div>'
-					'<!-- this is to increase the font size-->' 
-					'<center><button onclick="increaseButton();">Enlarge me Darling!!!</button></center>'
-					'</div>'
-                    '</body></html>')
-    
+                    '<div id ="fontIncrease"><p>Make me Bigger!!!</p></div>'
+                    '<!-- this is to increase the font size-->' 
+                    '<button onclick="increaseButton();">Embiggen</button>'
+                    '</div>'
+                    '</body>'
+                    '</html>')
+ 
     html_file.write(html_message)
     
 
@@ -56,12 +58,12 @@ def main():
 
         elif everyline: #finds content that is not a tag
             content = everyline.strip()
-                
-        else: # puts things together on empty lines
-            if tag in dict_tag: 
-                new_tag = dict_tag[tag] #finds HTML value from sample.text key
 
-                if isinstance(new_tag, list):  #if value is a list, make html_tag first list item
+        else: # puts things together on empty lines
+            if tag in dict_tag:
+                new_tag = dict_tag[tag] #finds HTML value from sample.text key
+                
+                if isinstance(new_tag, list): #if value is a list, make html_tag first list item
                     html_tag = new_tag[0]
                 else:
                     html_tag = new_tag  #if value is just a str
@@ -85,7 +87,6 @@ def main():
                 # print only works for easy tags
                 else:
                     print("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
-
 
      
     # end HTML
