@@ -56,7 +56,7 @@ def main():
                     '</html>')
  
     html_file.write(html_message)
-    html_file.close()
+ 
     
 
     # to look for tag identifiers
@@ -69,10 +69,10 @@ def main():
         elif everyline:
             content = everyline.strip()
                 
-<<<<<<< HEAD
+
         # else:
         #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
-=======
+
         else:
             if tag in dict_tag:
                 new_tag = dict_tag[tag]
@@ -84,10 +84,10 @@ def main():
 
                 # print(html_tag)
             html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
->>>>>>> c6f195c33d6ffdcd89c5fd19578dc7371446c47e
+
 
     # display result 
-
+    html_file.close()
 
 
 
