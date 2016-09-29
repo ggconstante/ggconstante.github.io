@@ -4,7 +4,7 @@ Static Website
 ## Header
 Sample Capstone Header
 
-## Header, medium
+## Header-medium
 Ging
 
 ## PP
@@ -13,7 +13,7 @@ Ging is a total badass. He will beat you at basketball.
 ## PP
 Lorem ipsum dolor sit amet, in diceret equidem percipit mei, et pri soluta aperiri. Eos liber causae id, cu mea quas disputando. No solum vulputate sea, prima inani volumus at nec, inermis adipiscing cum at. Magna causae ea nec.
 
-## Header, medium
+## Header-medium
 Albert
 
 ## PP

@@ -46,19 +46,19 @@ on how the element will be formated.
 ## Title(title)                        -Title of the website
 
 ## Header(h1)                       -A large header to the left of the page
-    ## Header, medium(h2)               -A medium size header to the left
-    ## Header, small(h3)                -A small size header to the left
-    ## Header, center(h1)               -A large header in the center of the page
-    ## Header, medium, center(h2)       -A medium size header in the center
-    ## Header, small, center(h3)        -A small size header in the center
+    ## Header-medium(h2)               -A medium size header to the left
+    ## Header-small(h3)                -A small size header to the left
+    ## Header-center(h1)               -A large header in the center of the page
+    ## Header-medium-center(h2)       -A medium size header in the center
+    ## Header-small-center(h3)        -A small size header in the center
 
 ## PP(p)                           -A paragraph left-aligned
-    ## PP, center                   -A paragraph center-aligned
-    ## PP, right                    -A paragraph center-aligned
+    ## PP-center                   -A paragraph center-aligned
+    ## PP-right                    -A paragraph center-aligned
 
 ## List(ul without dots)                         -A plain list
-    ## List, dotted(ul)                 -A list with dots
-    ## List, number(ol)                 -A numbered list
+    ## List-dotted(ul)                 -A list with dots
+    ## List-number(ol)                 -A numbered list
 
 ## Quote(blockquote)                        -A blockquote
     ## Quote, (person)                -A blockquote with credit, must insert person's name
