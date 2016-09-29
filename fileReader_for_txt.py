@@ -12,6 +12,17 @@ def main():
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
 
+    dict_tag = {'Title':'title', 'Header': 'h1','Header-medium':'h2','Header-small':'h3',
+                'Header-center':['h1', 'style="text-align:center;"'], 'Header-medium-center':['h2', 'style="text-align:center;"'],
+                'Header-small-center':['h3', 'style="text-align:center;"'], 'PP':'p', 'PP-center':['p', 'style="text-align:center;"'],
+                'PP-right':['p', 'style="text-align:right;"'], 'List':['ul', 'style="list-style-type:none;"', 'li'],
+                'List-dotted':['ul', 'li'],'List-number':['ol', 'li'], 'Quote': 'blockquote', 'Quote-person': ['blockquote', 'footer'],
+                'Link':'a'}
+
+    # open test.html and write to it
+    html_file = open("test.html", "w")
+
+
 
     #### this is where the dictionary starts########
     # def tag_Maker():
@@ -53,20 +64,27 @@ def main():
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
 
         if everyline.startswith("##"):
-            tagline = everyline[3:]
-            taglist = tagline.split(',')
+            tag = everyline[3:]
 
         elif everyline:
             content = everyline.strip()
-            taglist.append(content)
-            # print(taglist)
-            
-            if taglist[0] == "Title":
-                parsedTitle = taglist[1]
-                print(parsedTitle)
                 
+<<<<<<< HEAD
         # else:
         #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
+=======
+        else:
+            if tag in dict_tag:
+                new_tag = dict_tag[tag]
+                
+                if isinstance(new_tag, list):
+                    html_tag = new_tag[0]
+                else:
+                    html_tag = new_tag
+
+                # print(html_tag)
+            html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+>>>>>>> c6f195c33d6ffdcd89c5fd19578dc7371446c47e
 
     # display result 
 
