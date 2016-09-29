@@ -12,6 +12,10 @@ def main():
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
 
+
+    #### this is where the dictionary starts########
+    def tag_Maker():
+
     # instantiate parser and feed it some HTML
     # parserHTML = MyHTMLParser()
     # open test.html and write to it

@@ -39,11 +39,11 @@ adding another tag identifier. For example:
     ## PP
     Lorem ipsum    
 
-
+######################## focus this one #########################
 Below is a list of the elements available to the user with a brief description /
 on how the element will be formated. 
 
-## Title(h1)                        -Title of the website
+## Title(title)                        -Title of the website
 
 ## Header(h1)                       -A large header to the left of the page
     ## Header, medium(h2)               -A medium size header to the left
