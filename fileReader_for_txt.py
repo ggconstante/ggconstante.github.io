@@ -12,6 +12,7 @@ def main():
     lines = file.readlines() # this will read all the lines in the document not just a single line
     file.close() # make sure to always close the file
 
+    #### this is where the dictionary starts########
     dict_tag = {'Title':'title', 'Header': 'h1','Header-medium':'h2','Header-small':'h3',
                 'Header-center':['h1', 'style="text-align:center;"'], 'Header-medium-center':['h2', 'style="text-align:center;"'],
                 'Header-small-center':['h3', 'style="text-align:center;"'], 'PP':'p', 'PP-center':['p', 'style="text-align:center;"'],
@@ -19,22 +20,12 @@ def main():
                 'List-dotted':['ul', 'li'],'List-number':['ol', 'li'], 'Quote': 'blockquote', 'Quote-person': ['blockquote', 'footer'],
                 'Link':'a'}
 
+    # save hard_tags list for later
+    hard_tags = ['Header-center','Header-medium-center','Header-small-center','PP-center','PP-right','List','List-dotted','List-number'
+                'Quote-person']   
+
     # open test.html and write to it
     html_file = open("test.html", "w")
-
-
-
-    #### this is where the dictionary starts########
-    # def tag_Maker():
-
-    # instantiate parser and feed it some HTML
-    # parserHTML = MyHTMLParser()
-    # open test.html and write to it
-    html_file = open("test.html", "w")
-    # if html_file.mode == "w":
-    #     HTMLcontents = html_file.write()
-    #     parserHTML.feed('<html><head><title>This is just a Test</title></head>'o
-    #                     '<body><h1>Parse me Darling!</h1><body></html>')
 
     html_message = ('<!DOCTYPE html>'
                     '<html>'
@@ -56,37 +47,70 @@ def main():
                     '</html>')
  
     html_file.write(html_message)
+<<<<<<< HEAD
  
+=======
+>>>>>>> 23d24c5787c35f94c2deebe0bec4ab6c90449752
     
 
     # to look for tag identifiers
     for everyline in lines:
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
 
-        if everyline.startswith("##"):
+        if everyline.startswith("##"): # finds tags in sample.txt
             tag = everyline[3:]
 
-        elif everyline:
+        elif everyline: #finds content that is not a tag
             content = everyline.strip()
+<<<<<<< HEAD
                 
 
         # else:
         #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
 
         else:
+=======
+
+        else: # puts things together on empty lines
+>>>>>>> 23d24c5787c35f94c2deebe0bec4ab6c90449752
             if tag in dict_tag:
-                new_tag = dict_tag[tag]
+                new_tag = dict_tag[tag] #finds HTML value from sample.text key
                 
-                if isinstance(new_tag, list):
+                if isinstance(new_tag, list): #if value is a list, make html_tag first list item
                     html_tag = new_tag[0]
                 else:
-                    html_tag = new_tag
+                    html_tag = new_tag  #if value is just a str
 
+                # hard tags - CENTERS
+                if (tag == 'Header-center') or (tag == 'Header-medium-center') or (tag == 'Header-small-center') or (tag == 'PP-center'):
+                    print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # hard tags - RIGHTS
+                elif tag == 'PP-right':
+                    print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
+
+<<<<<<< HEAD
                 # print(html_tag)
             html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
 
     # display result 
+=======
+                # hard tags - LISTS
+                # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
+                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # hard tags - QUOTES
+                # elif tag == 'Quote-person':
+                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # print only works for easy tags
+                else:
+                    print("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+
+     
+    # end HTML
+>>>>>>> 23d24c5787c35f94c2deebe0bec4ab6c90449752
     html_file.close()
 
 
