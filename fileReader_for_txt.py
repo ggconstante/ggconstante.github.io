@@ -6,7 +6,8 @@
 
 ##################### comment each line please ########################
 
-#### this is where the dictionary starts########
+
+######## tag id dictionary and list ########
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3','</h3>'],'Header-center':['<h1 class="center">', '</h1>'], 
             'Header-medium-center':['<h2 class="center">', '</h2>'],
@@ -19,10 +20,11 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>']
             }
 
-# hard_tags list 
 hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']  
 
 
+
+######## read/write functions ########
 def reader(line):
     if line.startswith("##"): # finds tags in sample.txt
         tag = line[3:]
@@ -44,6 +46,9 @@ def reader(line):
 
             else:    
                 print(open_tag + content + close_tag + '\n')
+
+        else: #invalid tag use
+            print('Error: invalid tag\nView elements.txt for reference')
 
 
 def hard_tag(t):
@@ -68,88 +73,30 @@ def hard_tag(t):
         print(open_tag + words + new_tag[1] + person + new_tag[2] + close_tag)
 
 
+########################################
+
 
 def main():
     file = open("sample.txt", "r") # this will read the file
-    # readlines will also process each line separately 
-    lines = file.readlines() # this will read all the lines in the document not just a single line
-    file.close() # make sure to always close the file 
+    lines = file.readlines() # readlines will process each line separately 
+    file.close() # close file
 
-    # open test.html and write to it
-    html_file = open("test.html", "w")
+    html_file = open("test.html", "w") # open test.html and write to it
 
-    html_message = ('<!DOCTYPE html>\n'
-                    '<html>\n'
-                    '<head>\n'
-                    '<title>Needs a Title Here Senior</title>\n'
+    # HTML file header
+    html_file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>Needs a Title Here Senior</title>\n'
                     '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
                     '<link rel="stylesheet" type="text/css" href="style.css">\n</head>\n'
-                    '<script src ="capstone.js"></script>\n'
-                    '<body>\n'
-                    '<p class="center"><strong>Hello Capstone 2016</strong></center></p>'
-                    '<center><a href= "http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/">'
-                    'Useless people</a></center>'
-                    '<div>'
-                    '<div id ="fontIncrease"><p>Make me Bigger!!!</p></div>'
-                    '<!-- this is to increase the font size-->' 
-                    '<button onclick="increaseButton();">Embiggen</button>'
+                    '<script src ="capstone.js"></script>\n<body>\n<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
+                    '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
+                    'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p>Make me Bigger!!!</p>\n</div>\n'
+                    '<!-- this is to increase the font size-->\n<button onclick="increaseButton();">Embiggen</button>\n'
                     '</div>')
- 
-    html_file.write(html_message)
-    
 
-    # to look for tag identifiers
+    # look for tag identifiers
     for everyline in lines:
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
         reader(everyline) # calls reader() to write html 
-
-<<<<<<< HEAD
-        if everyline.startswith("##"): # finds tags in sample.txt
-            tag = everyline[3:]
-
-        elif everyline: #finds content that is not a tag
-            content = everyline.strip()
-                
-
-        # else:
-        #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
-
-        
-        else: # puts things together on empty lines
-
-            if tag in dict_tag:
-                new_tag = dict_tag[tag] #finds HTML value from sample.text key
-                
-                if isinstance(new_tag, list): #if value is a list, make html_tag first list item
-                    html_tag = new_tag[0]
-                else:
-                    html_tag = new_tag  #if value is just a str
-
-                # hard tags - CENTERS
-                if (tag == 'Header-center') or (tag == 'Header-medium-center') or (tag == 'Header-small-center') or (tag == 'PP-center'):
-                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
-
-                # hard tags - RIGHTS
-                elif tag == 'PP-right':
-                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
-
-                # print(html_tag)
-            html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
-
-
-    # display result 
-
-                # hard tags - LISTS
-                # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
-                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
-
-                # hard tags - QUOTES
-                # elif tag == 'Quote-person':
-                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
-
-                # print only works for easy tags
-                # else:
-                #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
 def html_list(key_word, items):
     for key_word in dict_tags.values():
@@ -157,15 +104,10 @@ def html_list(key_word, items):
             html_file.write(key_word)
             print (dict_list)
 
-=======
->>>>>>> 852b3a4c558203244192a3fe5dc5e7cbc72c4f53
     # end HTML
 
     html_file.write('\n</body>\n</html>')
     html_file.close()
-
-
-
 
 
 
