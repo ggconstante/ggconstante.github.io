@@ -97,7 +97,7 @@ def main():
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
         reader(everyline) # calls reader() to write html 
 
-<<<<<<< HEAD
+
         if everyline.startswith("##"): # finds tags in sample.txt
             tag = everyline[3:]
 
@@ -145,14 +145,25 @@ def main():
                 # else:
                 #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
-def html_list(key_word, items):
-    for key_word in dict_tags.values():
-        if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
+def html_list():
+    list_of_elements = dict_tag[List] # this picks up all the values
+    for i in list_of_elements:
+
+        html_file.write(key_word[0])
+
+
+
+
+
+        if key
+    for i in list_of_elements:
+        if i.key
+
+    if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
             html_file.write(key_word)
             print (dict_list)
 
-=======
->>>>>>> 852b3a4c558203244192a3fe5dc5e7cbc72c4f53
+
     # end HTML
 
     html_file.write('\n</body>\n</html>')
