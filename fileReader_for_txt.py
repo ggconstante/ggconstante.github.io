@@ -54,6 +54,12 @@ def hard_tag(t):
         print(open_tag + url + new_tag[1] + txt + close_tag + '\n')
 
     # list tags
+    elif (t == 'List') or (t == 'List-dotted') or (t == 'List-number'):
+        print(open_tag + '\n')
+        content = content.split('\n')
+        for i in content:
+            print(new_tag[1] + i + new_tag[2] + '\n')
+        print(close_tag)
 
     # quote tags
     elif t == 'Quote-person':
