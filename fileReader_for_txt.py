@@ -97,10 +97,15 @@ def main():
                     # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
 
                 # print only works for easy tags
-                else:
-                    html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+                # else:
+                #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
-     
+def html_list(key_word, items):
+    for key_word in dict_tags.values():
+        if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
+            html_file.write(key_word)
+            print (dict_list)
+
     # end HTML
 
     html_file.close()
