@@ -103,6 +103,62 @@ def main():
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
         reader(everyline) # calls reader() to write html 
 
+<<<<<<< HEAD
+        if everyline.startswith("##"): # finds tags in sample.txt
+            tag = everyline[3:]
+
+        elif everyline: #finds content that is not a tag
+            content = everyline.strip()
+                
+
+        # else:
+        #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
+
+        
+        else: # puts things together on empty lines
+
+            if tag in dict_tag:
+                new_tag = dict_tag[tag] #finds HTML value from sample.text key
+                
+                if isinstance(new_tag, list): #if value is a list, make html_tag first list item
+                    html_tag = new_tag[0]
+                else:
+                    html_tag = new_tag  #if value is just a str
+
+                # hard tags - CENTERS
+                if (tag == 'Header-center') or (tag == 'Header-medium-center') or (tag == 'Header-small-center') or (tag == 'PP-center'):
+                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # hard tags - RIGHTS
+                elif tag == 'PP-right':
+                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
+
+                # print(html_tag)
+            html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+
+
+    # display result 
+
+                # hard tags - LISTS
+                # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
+                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # hard tags - QUOTES
+                # elif tag == 'Quote-person':
+                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+
+                # print only works for easy tags
+                # else:
+                #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+
+def html_list(key_word, items):
+    for key_word in dict_tags.values():
+        if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
+            html_file.write(key_word)
+            print (dict_list)
+
+=======
+>>>>>>> 852b3a4c558203244192a3fe5dc5e7cbc72c4f53
     # end HTML
 
     html_file.write('\n</body>\n</html>')
