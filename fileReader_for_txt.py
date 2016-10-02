@@ -70,11 +70,11 @@ def main():
 
                 # hard tags - CENTERS
                 if (tag == 'Header-center') or (tag == 'Header-medium-center') or (tag == 'Header-small-center') or (tag == 'PP-center'):
-                    print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
 
                 # hard tags - RIGHTS
                 elif tag == 'PP-right':
-                    print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
+                    html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
 
                 # hard tags - LISTS
                 # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
@@ -86,7 +86,7 @@ def main():
 
                 # print only works for easy tags
                 else:
-                    print("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+                    html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
 
      
     # end HTML
