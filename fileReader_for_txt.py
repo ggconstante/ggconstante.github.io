@@ -58,8 +58,14 @@ def main():
 
         elif everyline: #finds content that is not a tag
             content = everyline.strip()
+                
 
+        # else:
+        #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
+
+        
         else: # puts things together on empty lines
+
             if tag in dict_tag:
                 new_tag = dict_tag[tag] #finds HTML value from sample.text key
                 
@@ -76,6 +82,12 @@ def main():
                 elif tag == 'PP-right':
                     html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
 
+                # print(html_tag)
+            html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+
+
+    # display result 
+
                 # hard tags - LISTS
                 # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
                     # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
@@ -90,6 +102,7 @@ def main():
 
      
     # end HTML
+
     html_file.close()
 
 
