@@ -89,8 +89,8 @@ def main():
                     '<link rel="stylesheet" type="text/css" href="style.css">\n</head>\n'
                     '<script src ="capstone.js"></script>\n<body>\n<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                     '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
-                    'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p>Make me Bigger!!!</p>\n</div>\n'
-                    '<!-- this is to increase the font size-->\n<button onclick="increaseButton();">Embiggen</button>\n'
+                    'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
+                    '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
                     '</div>')
 
     # look for tag identifiers
@@ -152,9 +152,11 @@ def html_list():
     for key_uno in list_of_elements:
         for key_dos in list_of_elements[key_uno]:
             if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
-            content = content.split("\n")
+            content = content.split(",")
                 for i in content:
                     html_file.write("<" + i + ">"  + content + "</")
+
+
                     
 =======
 >>>>>>> c0fe2638a90f70639fc589bbda490e5ae4ddf308
