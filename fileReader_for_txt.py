@@ -145,9 +145,24 @@ def main():
 
 #         html_file.write(key_word[0])
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+def html_list():
+    list_of_elements = dict_tag.iteritems():
+    for key_uno in list_of_elements:
+        for key_dos in list_of_elements[key_uno]:
+            if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
+            content = content.split("\n")
+                for i in content:
+                    html_file.write("<" + i + ">"  + content + "</")
+                    
+=======
+>>>>>>> c0fe2638a90f70639fc589bbda490e5ae4ddf308
 
 
+            
 
+                print(html_file.write("<" + key_uno[0] + ">" + ))
 
 #         if key
 #     for i in list_of_elements:
@@ -157,14 +172,22 @@ def main():
 #             html_file.write(key_word)
 #             print (dict_list)
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> c0fe2638a90f70639fc589bbda490e5ae4ddf308
 
+        
+       
 
+<<<<<<< HEAD
+=======
 # def html_list(key_word, items):
 #     for key_word in dict_tags.values():
 #         if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
 #             html_file.write(key_word)
 #             print (dict_list)
+>>>>>>> c0fe2638a90f70639fc589bbda490e5ae4ddf308
 
 
     # end HTML
