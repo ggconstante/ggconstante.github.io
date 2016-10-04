@@ -9,7 +9,7 @@
 
 ######## tag id dictionary and list ########
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
-            'Header-small':['<h3','</h3>'],'Header-center':['<h1 class="center">', '</h1>'], 
+            'Header-small':['<h3>','</h3>'],'Header-center':['<h1 class="center">', '</h1>'], 
             'Header-medium-center':['<h2 class="center">', '</h2>'],
             'Header-small-center':['<h3 class="center">', '</h3>'],'Link':['<a href="', '">', '</a>'],
             'PP':['<p>','</p>'], 'PP-center':['<p class="center">', '</p>'],
@@ -47,7 +47,7 @@ def reader(line):
             else:    
                 print(open_tag + content + close_tag + '\n')
 
-        else: #invalid tag use
+        else: #invalid tag
             print('Error: invalid tag\nView elements.txt for reference')
 
 
@@ -117,21 +117,21 @@ def main():
                 if tag == 'Link':
                     content = content.split(',')
                     url, txt = content[0], content[1]
-                    print(open_tag + url + new_tag[1] + txt + close_tag + '\n')
+                    html_file.write(open_tag + url + new_tag[1] + txt + close_tag + '\n')
 
                 # list tags
                 elif tag.startswith('List'):
-                    print(open_tag)
+                    html_file.write(open_tag)
                     list_content = content.split(',')
                     for i in list_content:
-                        print(new_tag[1] + i.strip() + new_tag[2])
-                    print(close_tag + '\n')
+                        html_file.write(new_tag[1] + i.strip() + new_tag[2])
+                    html_file.write(close_tag + '\n')
 
                 # quote tags
                 elif tag == 'Quote-person':
                     content = content.split('--')
                     person, words = content[0], content[1]
-                    print(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')    
+                    html_file.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')    
 
                 # print easy tags
                 else:
