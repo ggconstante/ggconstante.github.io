@@ -59,18 +59,18 @@ def hard_tag(t):
         print(open_tag + url + new_tag[1] + txt + close_tag + '\n')
 
     # list tags
-    elif (t == 'List') or (t == 'List-dotted') or (t == 'List-number'):
-        print(open_tag + '\n')
-        content = content.split('\n')
-        for i in content:
-            print(new_tag[1] + i + new_tag[2] + '\n')
-        print(close_tag)
+    elif t.startswith('List'):
+        print(open_tag)
+        list_content = content.split(',')
+        for i in list_content:
+            print(new_tag[1] + i.strip() + new_tag[2])
+        print(close_tag + '\n')
 
     # quote tags
     elif t == 'Quote-person':
-        content = content.split('\n')
+        content = content.split('--')
         person, words = content[0], content[1]
-        print(open_tag + words + new_tag[1] + person + new_tag[2] + close_tag)
+        print(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
 
 
 ########################################
@@ -96,90 +96,77 @@ def main():
     # look for tag identifiers
     for everyline in lines:
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
-        reader(everyline) # calls reader() to write html 
+        # reader(everyline) # calls reader() to write html 
 
-<<<<<<< HEAD
 
         if everyline.startswith("##"): # finds tags in sample.txt
             tag = everyline[3:]
-=======
-        # if everyline.startswith("##"): # finds tags in sample.txt
-        #     tag = everyline[3:]
->>>>>>> 54efa0af0eaf0af5f264192dbff29317b685f014
 
-        # elif everyline: #finds content that is not a tag
-        #     content = everyline.strip()
-                
-
-        # # else:
-        # #     html_file.write("<" + taglist[0] + ">" + taglist[-1] + "</" + taglist[0] + ">\n")
-
+        elif everyline: #finds content that is not a tag
+            content = everyline.strip()
         
-        # else: # puts things together on empty lines
+        else: # puts things together on empty lines
 
-        #     if tag in dict_tag:
-        #         new_tag = dict_tag[tag] #finds HTML value from sample.text key
+            if tag in dict_tag:
+                new_tag = dict_tag[tag] #finds HTML value from sample.text key
                 
-        #         if isinstance(new_tag, list): #if value is a list, make html_tag first list item
-        #             html_tag = new_tag[0]
-        #         else:
-        #             html_tag = new_tag  #if value is just a str
+                open_tag = new_tag[0]
+                close_tag = new_tag[-1]
 
-        #         # hard tags - CENTERS
-        #         if (tag == 'Header-center') or (tag == 'Header-medium-center') or (tag == 'Header-small-center') or (tag == 'PP-center'):
-        #             html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
+                # link tags
+                if tag == 'Link':
+                    content = content.split(',')
+                    url, txt = content[0], content[1]
+                    print(open_tag + url + new_tag[1] + txt + close_tag + '\n')
 
-        #         # hard tags - RIGHTS
-        #         elif tag == 'PP-right':
-        #             html_file.write("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")    
+                # list tags
+                elif tag.startswith('List'):
+                    print(open_tag)
+                    list_content = content.split(',')
+                    for i in list_content:
+                        print(new_tag[1] + i.strip() + new_tag[2])
+                    print(close_tag + '\n')
 
-        #         # print(html_tag)
-        #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
+                # quote tags
+                elif tag == 'Quote-person':
+                    content = content.split('--')
+                    person, words = content[0], content[1]
+                    print(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')    
+
+                # print easy tags
+                else:
+                    html_file.write(open_tag + content + close_tag + '\n')
+                    
 
 
-    # display result 
+# def html_list():
+#     list_of_elements = dict_tag[List] # this picks up all the values
+#     for i in list_of_elements:
 
-                # hard tags - LISTS
-                # elif (tag == 'List') or (tag == 'List-number') or (tag == 'List-dotted'):
-                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
-
-                # hard tags - QUOTES
-                # elif tag == 'Quote-person':
-                    # FIX THIS print("<" + html_tag + " " + new_tag[1] + ">" + content + "</" + html_tag + ">\n")
-
-                # print only works for easy tags
-                # else:
-                #     html_file.write("<" + html_tag + ">" + content + "</" + html_tag + ">\n")
-
-<<<<<<< HEAD
-def html_list():
-    list_of_elements = dict_tag[List] # this picks up all the values
-    for i in list_of_elements:
-
-        html_file.write(key_word[0])
+#         html_file.write(key_word[0])
 
 
 
 
 
-        if key
-    for i in list_of_elements:
-        if i.key
+#         if key
+#     for i in list_of_elements:
+#         if i.key
 
-    if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
-            html_file.write(key_word)
-            print (dict_list)
+#     if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
+#             html_file.write(key_word)
+#             print (dict_list)
 
 
-=======
 
-def html_list(key_word, items):
-    for key_word in dict_tags.values():
-        if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
-            html_file.write(key_word)
-            print (dict_list)
 
->>>>>>> 54efa0af0eaf0af5f264192dbff29317b685f014
+# def html_list(key_word, items):
+#     for key_word in dict_tags.values():
+#         if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
+#             html_file.write(key_word)
+#             print (dict_list)
+
+
     # end HTML
 
     html_file.write('\n</body>\n</html>')
