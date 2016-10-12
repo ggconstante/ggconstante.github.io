@@ -5,7 +5,15 @@
 # import webbrowser
 
 ##################### comment each line please ########################
+from flask import Flask
 
+app = Flask(__name__)
+# @ signifies a decorator - wrapping a function and help modify its behavior 
+@app.route('/') # this is the root 
+def home_page():
+    return 'this is just a homepage'
+if __name__ == "__main__":
+    app.run(debug=True)
 
 ######## tag id dictionary and list ########
 dict_tag = {'Title':['<!DOCTYPE html>\n<html>\n<head>\n<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
@@ -150,25 +158,19 @@ def main():
 
 #         html_file.write(key_word[0])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-def html_list():
-    list_of_elements = dict_tag.iteritems():
-    for key_uno in list_of_elements:
-        for key_dos in list_of_elements[key_uno]:
-            if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
-            content = content.split(",")
-                for i in content:
-                    html_file.write("<" + i + ">"  + content + "</")
+
+# def html_list():
+#     list_of_elements = dict_tag.iteritems():
+#     for key_uno in list_of_elements:
+#         for key_dos in list_of_elements[key_uno]:
+#             if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
+#             content = content.split(",")
+#                 for i in content:
+#                     html_file.write("<" + i + ">"  + content + "</")
 
 
                     
-=======
->>>>>>> c0fe2638a90f70639fc589bbda490e5ae4ddf308
 
-=======
->>>>>>> dd82a24f0bdb1894d027ada5d2232749dd6ede7d
 
 # def html_list():
 #     list_of_elements = dict_tag.iteritems():
