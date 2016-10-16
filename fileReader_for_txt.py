@@ -118,6 +118,8 @@ def main():
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
                 '</div>')
 
+    html_file.write('\n<a class="twitter-timeline" href="https://twitter.com/albertreiber">Tweets by albertreiber</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>')
+
 
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
@@ -127,6 +129,8 @@ def main():
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
+
+    # Adds files and uploads to GitHub for live hosting
     os.system("git add -A")
     os.system("git commit -m 'test'")
     os.system("git push")
