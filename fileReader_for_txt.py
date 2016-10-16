@@ -5,7 +5,7 @@
 # import webbrowser
 
 ##################### comment each line please ########################
-from flask import Flask
+from flask import Flask import reader_template
 
 app = Flask(__name__)
 # @ signifies a decorator - wrapping a function and help modify its behavior 
@@ -14,6 +14,8 @@ def home_page():
     return 'this is just a homepage'
 if __name__ == "__main__":
     app.run(debug=True)
+
+
 
 ######## tag id dictionary and list ########
 dict_tag = {'Title':['<!DOCTYPE html>\n<html>\n<head>\n<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
