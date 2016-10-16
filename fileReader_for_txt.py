@@ -1,24 +1,9 @@
 # fileReader for .txt
 # this demonstrates how to read a file and 
 # parse it using python
-# from html.parser import HTMLParser
-# import webbrowser
+import os
 
 ##################### comment each line please ########################
-<<<<<<< HEAD
-from flask import Flask import reader_template
-
-app = Flask(__name__)
-# @ signifies a decorator - wrapping a function and help modify its behavior 
-@app.route('/') # this is the root 
-def home_page():
-    return 'this is just a homepage'
-if __name__ == "__main__":
-    app.run(debug=True)
-=======
->>>>>>> c421050f397d60f1a61b0bae23173e02defe53e9
-
-
 
 ######## tag id dictionary and list ########
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
@@ -30,17 +15,31 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'List':['<ul style="list-style-type:none;">', '<li>', '</li>','</ul>'],
             'List-dotted':['<ul>', '<li>', '</li>','</ul>'],'List-number':['<ol>', '<li>', '</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
-            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>']
+            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
+            'Image':['<img src="', '"/>']
             }
 
 hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']  
 
 
-
 ######## read/write functions ########
+def header(t, c, f):
+    if t in dict_tag and t == 'Title': # checks for valid tags
+        new_tag = dict_tag[t] #finds HTML value  
+        open_tag = new_tag[0]
+        close_tag = new_tag[-1]
+
+        f.write('<!DOCTYPE html>\n<html>\n<head>\n'
+                '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
+                '<link rel="stylesheet" type="text/css" href="style.css">\n')
+        f.write(open_tag + c + close_tag + '\n</head>\n\n<body>\n')
+
+    else:
+        reader(t, c, f)
+
+
 def reader(t, c, f):
-    
-    if t in dict_tag: # checks for valid tags
+    if t in dict_tag and t != 'Title': # checks for valid tags
         new_tag = dict_tag[t] #finds HTML value  
         open_tag = new_tag[0]
         close_tag = new_tag[-1]
@@ -56,7 +55,6 @@ def reader(t, c, f):
 
 
 def hard_tag(t, c, f):
-
     if t in dict_tag: # checks for valid tags
         new_tag = dict_tag[t] #finds HTML value  
         open_tag = new_tag[0]
@@ -98,16 +96,6 @@ def main():
 
     html_file = open("test.html", "w") # open test.html and write to it
 
-    # HTML file header
-    html_file.write('<!DOCTYPE html>\n<html>\n<head>\n'
-                    '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
-                    '<link rel="stylesheet" type="text/css" href="style.css">\n</head>\n'
-                    '<script src ="capstone.js"></script>\n<body>\n<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
-                    '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
-                    'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
-                    '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
-                    '</div>')
-
     # look for tag identifiers
     for everyline in lines:
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
@@ -120,100 +108,28 @@ def main():
             content = everyline.strip()
         
         else: # puts things together on empty lines
-            reader(tag, content, html_file)
-
-        #     if tag in dict_tag:
-        #         new_tag = dict_tag[tag] #finds HTML value from sample.text key
-                
-        #         open_tag = new_tag[0]
-        #         close_tag = new_tag[-1]
-
-        #         # link tags
-        #         if tag == 'Link':
-        #             content = content.split(',')
-        #             url, txt = content[0], content[1]
-        #             html_file.write(open_tag + url + new_tag[1] + txt + close_tag + '\n')
-
-        #         # list tags
-        #         elif tag.startswith('List'):
-        #             html_file.write(open_tag)
-        #             list_content = content.split(',')
-        #             for i in list_content:
-        #                 html_file.write(new_tag[1] + i.strip() + new_tag[2])
-        #             html_file.write(close_tag + '\n')
-
-        #         # quote tags
-        #         elif tag == 'Quote-person':
-        #             content = content.split('--')
-        #             person, words = content[0], content[1]
-        #             html_file.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')    
-
-        #         # print easy tags
-        #         else:
-        #             html_file.write(open_tag + content + close_tag + '\n')
-                    
+            header(tag, content, html_file)
 
 
-# def html_list():
-#     list_of_elements = dict_tag[List] # this picks up all the values
-#     for i in list_of_elements:
-
-#         html_file.write(key_word[0])
-
-
-# def html_list():
-#     list_of_elements = dict_tag.iteritems():
-#     for key_uno in list_of_elements:
-#         for key_dos in list_of_elements[key_uno]:
-#             if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
-#             content = content.split(",")
-#                 for i in content:
-#                     html_file.write("<" + i + ">"  + content + "</")
+    # Extras
+    html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
+                '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
+                'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
+                '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
+                '</div>')
 
 
-                    
-
-
-# def html_list():
-#     list_of_elements = dict_tag.iteritems():
-#     for key_uno in list_of_elements:
-#         for key_dos in list_of_elements[key_uno]:
-#             if (key_uno == 'List') or (key_uno == 'List_dotted') or (key_uno == 'List-number'):
-#             content = content.split("\n")
-#                 for i in content:
-#                     html_file.write("<" + i + ">"  + content + "</")
-                    
-
-#                 print(html_file.write("<" + key_uno[0] + ">" + ))
-
-#         if key
-#     for i in list_of_elements:
-#         if i.key
-
-#     if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
-#             html_file.write(key_word)
-#             print (dict_list)
-
-
-# def html_list(key_word, items):
-#     for key_word in dict_tags.values():
-#         if (key_word == 'List') or (key_word == 'List_dotted') or (key_word == 'List-number'):
-#             html_file.write(key_word)
-#             print (dict_list)
-
-
+    # JS files
+    html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
 
     # end HTML
 
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
-<<<<<<< HEAD
     os.system("git add -A")
     os.system("git commit -m 'test'")
     os.system("git push")
-=======
->>>>>>> parent of 274a28c... test
 
 
 if __name__ == "__main__":
