@@ -5,18 +5,9 @@
 # import webbrowser
 
 ##################### comment each line please ########################
-from flask import Flask
-
-app = Flask(__name__)
-# @ signifies a decorator - wrapping a function and help modify its behavior 
-@app.route('/') # this is the root 
-def home_page():
-    return 'this is just a homepage'
-if __name__ == "__main__":
-    app.run(debug=True)
 
 ######## tag id dictionary and list ########
-dict_tag = {'Title':['<!DOCTYPE html>\n<html>\n<head>\n<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
+dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3>','</h3>'],'Header-center':['<h1 class="center">', '</h1>'], 
             'Header-medium-center':['<h2 class="center">', '</h2>'],
             'Header-small-center':['<h3 class="center">', '</h3>'],'Link':['<a href="', '">', '</a>'],
@@ -33,31 +24,24 @@ hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']
 
 
 ######## read/write functions ########
-def reader(t, c):
-    # if line.startswith("##"): # finds tags in sample.txt
-    #     tag = line[3:]
-
-    # elif line: #finds content that is not a tag
-    #     content = line.strip()
-        
-    # else: # puts things together on empty lines           
-
+def reader(t, c, f):
+    
     if t in dict_tag: # checks for valid tags
         new_tag = dict_tag[t] #finds HTML value  
         open_tag = new_tag[0]
         close_tag = new_tag[-1]
 
         if t in hard_tags: # if a hard tag use hard_tag()
-            hard_tag(t, c)
+            hard_tag(t, c, f)
 
         else:    
-            html_file.write(open_tag + c + close_tag + '\n')
+            f.write(open_tag + c + close_tag + '\n')
 
     else: #invalid tag
-        print('Error: invalid tag\nView elements.txt for reference')
+        print('Error: ' + t + ' is an invalid tag\nView elements.txt for reference')
 
 
-def hard_tag(t, c):
+def hard_tag(t, c, f):
 
     if t in dict_tag: # checks for valid tags
         new_tag = dict_tag[t] #finds HTML value  
@@ -68,21 +52,26 @@ def hard_tag(t, c):
     if t == 'Link':
         c = c.split(',')
         url, txt = c[0], c[1]
-        html_file.write(open_tag + url + new_tag[1] + txt + close_tag + '\n')
+        f.write(open_tag + url + new_tag[1] + txt + close_tag + '\n')
 
     # list tags
     elif t.startswith('List'):
-        html_file.write(open_tag)
+        f.write(open_tag)
         list_content = c.split(',')
         for i in list_content:
-            html_file.write(new_tag[1] + i.strip() + new_tag[2])
-        html_file.write(close_tag + '\n')
+            f.write(new_tag[1] + i.strip() + new_tag[2])
+        f.write(close_tag + '\n')
 
     # quote tags
     elif t == 'Quote-person':
         c = c.split('--')
         person, words = c[0], c[1]
-        html_file.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
+        if not person:
+            print('Error, you forgot to credit your quote to somebody')
+        elif not words:
+            print('Error, you forgot your quote')
+        else:
+            f.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
 
 
 ########################################
@@ -96,7 +85,7 @@ def main():
     html_file = open("test.html", "w") # open test.html and write to it
 
     # HTML file header
-    html_file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>Needs a Title Here Senior</title>\n'
+    html_file.write('<!DOCTYPE html>\n<html>\n<head>\n'
                     '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
                     '<link rel="stylesheet" type="text/css" href="style.css">\n</head>\n'
                     '<script src ="capstone.js"></script>\n<body>\n<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
@@ -110,7 +99,6 @@ def main():
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
         # reader(everyline, tag) # calls reader() to write html 
 
-
         if everyline.startswith("##"): # finds tags in sample.txt
             tag = everyline[3:]
 
@@ -118,7 +106,7 @@ def main():
             content = everyline.strip()
         
         else: # puts things together on empty lines
-            reader(tag, content)
+            reader(tag, content, html_file)
 
         #     if tag in dict_tag:
         #         new_tag = dict_tag[tag] #finds HTML value from sample.text key
