@@ -30,7 +30,7 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'List':['<ul style="list-style-type:none;">', '<li>', '</li>','</ul>'],
             'List-dotted':['<ul>', '<li>', '</li>','</ul>'],'List-number':['<ol>', '<li>', '</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
-            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>']
+            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>']
             }
 
 hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']  
@@ -208,6 +208,12 @@ def main():
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
+<<<<<<< HEAD
+    os.system("git add -A")
+    os.system("git commit -m 'test'")
+    os.system("git push")
+=======
+>>>>>>> parent of 274a28c... test
 
 
 if __name__ == "__main__":

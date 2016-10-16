@@ -37,6 +37,9 @@ Albert's nut list
 ## List-dotted
 Almonds, Cashews, Old Walnuts, Peanuts
 
+## Image
+kitty.jpg
+
 ## Quote-person
 Gingrefel Constante -- "Know where you're going and know where to stop." 
 
