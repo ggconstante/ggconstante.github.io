@@ -85,6 +85,15 @@ def hard_tag(t, c, f):
         else:
             f.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
 
+def tweets(f):
+    askTwitter = input('Do you want to include your recent tweets? y/n ')
+    if askTwitter.lower() == 'y':
+        account = input('If your twitter account name is @Bob124, enter Bob124\nPlease enter a public twitter account name:')
+        # if account not valid....
+        f.write('<a class="twitter-timeline" href="https://twitter.com/' + account + '">'
+            'Tweets by ' + account + '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>')
+    else:
+        return
 
 ########################################
 
@@ -110,6 +119,7 @@ def main():
         else: # puts things together on empty lines
             header(tag, content, html_file)
 
+    tweets(html_file)            
 
     # Extras
     html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
@@ -117,9 +127,6 @@ def main():
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
                 '</div>')
-
-    html_file.write('\n<a class="twitter-timeline" href="https://twitter.com/albertreiber">Tweets by albertreiber</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>')
-
 
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
@@ -131,9 +138,9 @@ def main():
 
 
     # Adds files and uploads to GitHub for live hosting
-    os.system("git add -A")
-    os.system("git commit -m 'test'")
-    os.system("git push")
+    # os.system("git add -A")
+    # os.system("git commit -m 'test'")
+    # os.system("git push")
 
 
 if __name__ == "__main__":
