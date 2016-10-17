@@ -15,7 +15,8 @@ a {
    color: #36454f;
 }
 
-.center {
+/*Header-center':['<h1 class="center">', '</h1>*/
+.python_website {
     text-align: center;
 }
 
