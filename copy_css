@@ -1,0 +1,47 @@
+a {
+   color: #36454f;
+}
+
+.centered{
+    text-align: center;
+}
+
+/*Header-small':['<h3 class="header_small">','</h3>*/
+.header_small:first-child{
+    text-align: center;
+    background-color: green;
+    top: 100px;
+    left:100px;
+    position: absolute;;
+}
+
+.Albers_nuts_header_small{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    display: none;
+}
+
+#Alberts_nutList{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    display: none;
+}
+
+ul.list_dotted{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;*/
+    display: none;
+}
+
+
+
+.right {
+    text-align: right;
+}
+
+a:hover{
+    font-weight: bold;
+}

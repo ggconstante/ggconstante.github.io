@@ -6,19 +6,19 @@ import os
 ##################### comment each line please ########################
 
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
-            'Header-small':['<h3 class="ging_list">','</h3>'],
-            'Header-center':['<h1 class="python_website_generator">''</div>'
+            'Header-small':['<h3 class="header_small">','</h3>'],
+            'Header-center':['<h1 id="python_website_gen">''</div>'
             '<div id= "python_website_gen"' 
-            'style = "background-color:#6e7f80; color:#FF8C00; position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
-            'onmouseover = "buttonToRight(this)"> Hover over Me!'
+            'style = "background-color:#6e7f80; color:red; position:relative; width: 400px; height:100px; left:10px; text-align:center;"'
+            'onmouseover = "buttonToRight(this)"> Python Website Generator'
             '</div>', 
             '</h1>'], 
-            'Header-medium-center':['<h2 class="centered">', '</h2>'],
-            'Header-small-center':['<h3 class="Albertnuts_list">', '</h3>'],'Link':['<a href="', '">', '</a>'],
-            'PP':['<p class="pp_one">','</p>'], 'PP-center':['<p class="pp_two">', '</p>'],
-            'PP-right':['<p class="pp_right">', '</p>'], 
+            'Header-medium-center':['<h2 class="center">', '</h2>'],
+            'Header-small-center':['<h3 class="center">', '</h3>'],'Link':['<a href="', '">', '</a>'],
+            'PP':['<p>','</p>'], 'PP-center':['<p class="center">', '</p>'],
+            'PP-right':['<p class="right">', '</p>'], 
             'List':['<ul>', '<li>', '</li>','</ul>'],
-            'List-dotted':['<ul>', '<li class="list_dotted">', '</li>','</ul>'],'List-number':['<ol class="gings_foodList">', '<li class="gings_foodList">', '</li>','</ol>'], 
+            'List-dotted':['<ul class = "deez_nuts" >', '<li>', '</li>','</ul>'],'List-number':['<ol>', '<li>', '</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
@@ -130,28 +130,19 @@ def main():
 
     # Extras
     html_file.write('<!DOCTYPE html><p class="center"><strong>Hello Capstone 2016</strong></p>\n'
+                # '<div id= "MoveRight"' 
+                # 'style = "background-color:black; color:red; position:relative; width: 300px; height:300px; left:10px; text-align:center;"'
+                'onmouseover = "buttonToRight(this)">Python Website Generator'
+                # '</div>'
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
-                # '<div>'
-                # '<div id ="hideMe" style = "color:blue;"> <p>Click the magic of JavaScript and see what will happen!!!</p></div>\n'
-                # '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 # '</div>'
+                # '<div id= "python_website_gen"' 
+                # 'style = "background-color:black; color:red; position:relative; width: 250px; height:100px; left:10px; text-align:center;"'
+                # 'onmouseover = "buttonToRight(this)"> Python Website Generator'
+                # '</div>')
                 )
-
-    html_file.write('<!DOCTYPE html>'
-                '<div>'
-                '<div id ="hideMe" style = "color:blue;"> <p>This Capstone is lit if only I know how to design shit!</p></div>\n'
-                '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
-                '</div>'
-                )
-
-    # <?php
-    # $time = time();
-    # $actual_time = date('H:i:s', $time);
-    # echo 'The current time is ' .$actual_time;
-    # ?>
-                    
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
 
@@ -166,7 +157,6 @@ def main():
     # os.system("git add -A")
     # os.system("git commit -m 'test'")
     # os.system("git push")
-
 
 
 if __name__ == "__main__":

@@ -2,15 +2,15 @@
 Static Website
 
 ## Header-center
-Python Website Generator 
+Python Website Generator  
 
 ## Header-small
-Ging's favorite places to eat
+Ging's List
 
 ## List-number
 Chipotle, Obon, Opa, Miss Saigon 
 
-## Header-small
+## Header-small-center
 Albert's nut list
 
 ## List-dotted
@@ -36,6 +36,9 @@ Ging
 
 ## PP
 Ging is a total badass. He will beat you at basketball.
+
+## Image
+kitty.jpg
 
 ## Quote-person
 Gingrefel Constante -- "Know where you're going and know where to stop." 

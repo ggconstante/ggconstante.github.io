@@ -1,31 +1,52 @@
-body{
+body {
+    position: relative;
+    font-style: normal;
     font-size: 16px;
     width: 100%;
     overflow-x: hidden;
     background-color: #6e7f80;
-    color: white;
 }
 
-header { 
-   color: #536878;
-   background-color: #fefefe;
+.python_website_generator { 
+   background-color:#6e7f80; /*this backgroud color needs to be the same as the body*/
+   text-align: center;
 }
 
-a {
-   color: #36454f;
+.ging_list { /*this is the Ging's List*/
+    margin-left: 25px;
+    /*position: fixed;*/
+}
+/*this is Ging's Food list*/
+.gings_foodList {
+    /*position: fixed;*/ /*Probably shouldn't be relative*/
+    /*background-size: 100px 100px;*/
+    background-color: orange;
+    /*background-origin: content-box;*/
+    
+    /*padding-left: 100px;
+    padding-right: 100px;*/
 }
 
-/*Header-center':['<h1 class="center">', '</h1>*/
-.python_website {
-    text-align: center;
+.Albertnuts_list { /*this is Albert's nut list*/
+    margin-bottom: 40px;
+    margin-left: 415px;
+    /*margin-right: 100px;*/
+}
+/*this is the list dotted*/
+.list_dotted {
+    margin-left: 382px;
+    background-color: #F08080;
+    margin-bottom: 20px;
 }
 
-.right {
-    text-align: right;
+p:first-child {
+    font-style: italic;
+    border: 1px solid red;
 }
 
-a:hover{
-    font-weight: bold;
+.pp_two {
+    font-style: oblique;
+    border: 2px solid blue;
 }
 
 blockquote footer{
