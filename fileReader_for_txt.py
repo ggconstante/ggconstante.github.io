@@ -90,6 +90,22 @@ def hard_tag(t, c, f):
         else:
             f.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
 
+<<<<<<< HEAD
+=======
+def tweets(f):
+    askTwitter = input('Do you want to include your recent tweets? y/n ')
+    if askTwitter.lower() == 'y':
+        account = input('If your twitter account name is @Bob124, enter Bob124\nPlease enter a public twitter account name:')
+        # if account not valid....
+        f.write('<a class="twitter-timeline" href="https://twitter.com/' + account + '">'
+            'Tweets by ' + account + '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>')
+    else:
+        return
+
+########################################
+
+
+>>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
 def main():
     file = open("sample.txt", "r") # this will read the file
     lines = file.readlines() # readlines will process each line separately 
@@ -127,12 +143,14 @@ def main():
         else: # puts things together on empty lines
             header(tag, content, html_file)
 
+    tweets(html_file)            
 
     # Extras
     html_file.write('<!DOCTYPE html><p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
+<<<<<<< HEAD
                 # '<div>'
                 # '<div id ="hideMe" style = "color:blue;"> <p>Click the magic of JavaScript and see what will happen!!!</p></div>\n'
                 # '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
@@ -152,6 +170,10 @@ def main():
     # echo 'The current time is ' .$actual_time;
     # ?>
                     
+=======
+                '</div>')
+
+>>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
 
@@ -166,7 +188,10 @@ def main():
     # os.system("git add -A")
     # os.system("git commit -m 'test'")
     # os.system("git push")
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
 
 
 if __name__ == "__main__":
