@@ -183,12 +183,15 @@ def main():
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
-    print(os.name)
+    
 
-    # Adds files and uploads to GitHub for live hosting
-    os.system("git add -A")
-    os.system("git commit -m 'test'")
-    os.system("git push")
+    # Adds files and uploads to GitHub for live hosting FOR MAC OS ONLY
+    if os.name == 'posix':
+        os.system("git add -A")
+        os.system("git commit -m 'test'")
+        os.system("git push")
+    else:
+        return
 
 
 if __name__ == "__main__":
