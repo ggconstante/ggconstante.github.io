@@ -1,7 +1,7 @@
 # fileReader for .txt
 # this demonstrates how to read a file and 
 # parse it using python
-import os, sys, subprocess
+import os
 
 ##################### comment each line please ########################
 
@@ -194,9 +194,7 @@ def main():
         os.system("git commit -m 'test'")
         os.system("git push")
     else:
-        git("add", "-A")
-        git("commit", "-m", "'test'")
-        git("push")
+        return
 
 
 
