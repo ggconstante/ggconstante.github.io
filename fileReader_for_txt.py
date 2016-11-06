@@ -17,8 +17,10 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'Header-small-center':['<h3 class="Albertnuts_list">', '</h3>'],'Link':['<a href="', '">', '</a>'],
             'PP':['<p class="pp_one">','</p>'], 'PP-center':['<p class="pp_two">', '</p>'],
             'PP-right':['<p class="pp_right">', '</p>'], 
-            'List':['<ul>', '<li>', '</li>','</ul>'],
-            'List-dotted':['<ul>', '<li class="list_dotted">', '</li>','</ul>'],'List-number':['<ol class="gings_foodList">', '<li class="gings_foodList">', '</li>','</ol>'], 
+            
+            'List':['<ul class="list">', '<li>','<div class="list-cont">','</div', '</li>','</ul>'],
+            'List-dotted':['<ul class="list">', '<li class="list_dotted">','<div class="list-cont">','</div', '</li>','</ul>'],'List-number':['<ol class="list">', '<li>', '<div class="list-cont">','</div','</li>','</ol>'], 
+            
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
@@ -75,6 +77,10 @@ def hard_tag(t, c, f):
     elif t.startswith('List'):
         f.write(open_tag)
         list_content = c.split(',')
+
+        # div container tags
+        start_cont, end_cont = new_tag[2], new_tag[3]
+
         for i in list_content:
             f.write(new_tag[1] + i.strip() + new_tag[2])
         f.write(close_tag + '\n')
@@ -90,8 +96,6 @@ def hard_tag(t, c, f):
         else:
             f.write(open_tag + words.strip() + new_tag[1] + person.strip() + new_tag[2] + close_tag + '\n')
 
-<<<<<<< HEAD
-=======
 def tweets(f):
     askTwitter = input('Do you want to include your recent tweets? y/n ')
     if askTwitter.lower() == 'y':
@@ -105,7 +109,6 @@ def tweets(f):
 ########################################
 
 
->>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
 def main():
     file = open("sample.txt", "r") # this will read the file
     lines = file.readlines() # readlines will process each line separately 
@@ -170,10 +173,8 @@ def main():
     # echo 'The current time is ' .$actual_time;
     # ?>
                     
-=======
                 '</div>')
 
->>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
 
@@ -188,10 +189,6 @@ def main():
     # os.system("git add -A")
     # os.system("git commit -m 'test'")
     # os.system("git push")
-<<<<<<< HEAD
-
-=======
->>>>>>> f0d61ac936f5d7821e06497ac3561ffe04147f78
 
 
 if __name__ == "__main__":
