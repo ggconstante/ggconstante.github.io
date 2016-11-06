@@ -1,7 +1,7 @@
 # fileReader for .txt
 # this demonstrates how to read a file and 
 # parse it using python
-import os
+import os, platform
 
 ##################### comment each line please ########################
 
@@ -183,6 +183,7 @@ def main():
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
+    print(platform.system())
 
     # Adds files and uploads to GitHub for live hosting
     os.system("git add -A")
