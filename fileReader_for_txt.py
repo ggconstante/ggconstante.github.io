@@ -153,7 +153,6 @@ def main():
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
-<<<<<<< HEAD
                 # '<div>'
                 # '<div id ="hideMe" style = "color:blue;"> <p>Click the magic of JavaScript and see what will happen!!!</p></div>\n'
                 # '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
@@ -173,7 +172,7 @@ def main():
     # echo 'The current time is ' .$actual_time;
     # ?>
                     
-                '</div>')
+                # '</div>')
 
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
@@ -186,9 +185,9 @@ def main():
 
 
     # Adds files and uploads to GitHub for live hosting
-    # os.system("git add -A")
-    # os.system("git commit -m 'test'")
-    # os.system("git push")
+    os.system("git add -A")
+    os.system("git commit -m 'test'")
+    os.system("git push")
 
 
 if __name__ == "__main__":
