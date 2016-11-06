@@ -183,7 +183,7 @@ def main():
     html_file.write('\n</body>\n</html>')
     html_file.close()
 
-    print(platform.system())
+    print(platform.platform())
 
     # Adds files and uploads to GitHub for live hosting
     os.system("git add -A")
