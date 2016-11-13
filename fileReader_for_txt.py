@@ -169,7 +169,7 @@ def main():
                 '</div>'
                 )
 
-    footer = '<footer>\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
+    footer = '<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
     html_file.write(footer)
 
     # JS files
