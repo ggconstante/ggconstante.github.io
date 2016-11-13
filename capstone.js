@@ -6,7 +6,7 @@ var increaseButton = function(){//this is you increase button your calling
             divIncreaseFont.style.fontSize =  pixelIncrease + 1 + "px";//this will convert the string into an integer and increases each time you press the font by 1
         }
 var hideButton = function(){//this is for the hide
-        var divHide = document.getElementById("btn");//this is the div you are calling
+        var divHide = document.getElementById("hideMe");//this is the div you are calling
         var buttonHide = document.getElementById("click");//this is your button..you press this guy..
         divHide.style.visibility = "hidden";//this will hide your paragraph
         buttonHide.onclick = showButton;//this is doing the showButton
@@ -15,7 +15,7 @@ var hideButton = function(){//this is for the hide
 
 var showButton = function(){//this is for the show
         var buttonShow = document.getElementById("click");
-        var divShow = document.getElementById("btn");
+        var divShow = document.getElementById("hideMe");
             divShow.style.visibility = "visible";
             buttonShow.onclick = hideButton;
             buttonShow.value = "Hide";
