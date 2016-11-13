@@ -54,6 +54,8 @@ blockquote footer{
     font-size: bold;
     padding: 10px;
     outline:  1px solid transparent;
+    border: 1 px solid #5c4b72;
+    border-radius: 5px;
 }
 
 footer{
