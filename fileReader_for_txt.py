@@ -169,13 +169,8 @@ def main():
                 '</div>'
                 )
 
-    # <?php
-    # $time = time();
-    # $actual_time = date('H:i:s', $time);
-    # echo 'The current time is ' .$actual_time;
-    # ?>
-                    
-                # '</div>')
+    footer = '<footer>\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
+    html_file.write(footer)
 
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
