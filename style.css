@@ -48,7 +48,7 @@ p:first-child {
 blockquote footer{ 
 }
 
-.btn{
+#btn{
     background-color: #9d92a9;
     color: white;
     font-size: bold;
