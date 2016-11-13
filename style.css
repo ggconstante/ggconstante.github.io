@@ -4,6 +4,7 @@ body {
     font-size: 16px;
     width: 100%;
     overflow-x: hidden;
+    background-color: #eeeeee;
 }
 
 .python_website_generator { 
@@ -52,6 +53,8 @@ footer{
     width: 100%;
     height: 50px;
     margin-top: 3%;
+    background-color: #5c4b72;
+    color: white;
 }
 
 /* ###########################################################################
