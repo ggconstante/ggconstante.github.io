@@ -39,7 +39,7 @@ def header(t, c, f):
         f.write('<!DOCTYPE html>\n<html>\n<head>\n'
                 '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
                 '<link rel="stylesheet" type="text/css" href="style.css">\n')
-        f.write(open_tag + c + close_tag + '\n</head>\n\n<body>\n')
+        f.write(open_tag + c + close_tag + '\n</head>\n\n<body>\n<div id="wrapper">\n')
 
     else:
         reader(t, c, f)
@@ -178,7 +178,7 @@ def main():
 
     # end HTML
 
-    html_file.write('\n</body>\n</html>')
+    html_file.write('\n</div>\n</body>\n</html>')
     html_file.close()
 
     
