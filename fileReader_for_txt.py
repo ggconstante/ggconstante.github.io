@@ -1,7 +1,7 @@
 # fileReader for .txt
 # this demonstrates how to read a file and 
 # parse it using python
-import os, sys, subprocess
+import os
 
 ##################### comment each line please ########################
 
@@ -9,7 +9,7 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'Header-small':['<h3 class="ging_list">','</h3>'],
             'Header-center':['<h1 class="python_website_generator">''</div>'
             '<div id= "python_website_gen"' 
-            'style = "background-color:#6e7f80; color:#FF8C00; position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
+            'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
             'onmouseover = "buttonToRight(this)"> Hover over Me!'
             '</div>', 
             '</h1>'], 
@@ -194,9 +194,7 @@ def main():
         os.system("git commit -m 'test'")
         os.system("git push")
     else:
-        git("add", "-A")
-        git("commit", "-m", "'test'")
-        git("push")
+        return
 
 
 

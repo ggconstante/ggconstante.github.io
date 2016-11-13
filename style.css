@@ -4,11 +4,10 @@ body {
     font-size: 16px;
     width: 100%;
     overflow-x: hidden;
-    background-color: #6e7f80;
+    background-color: #eeeeee;
 }
 
 .python_website_generator { 
-   background-color:#6e7f80; /*this backgroud color needs to be the same as the body*/
    text-align: center;
 }
 
@@ -20,9 +19,7 @@ body {
 .gings_foodList {
     /*position: fixed;*/ /*Probably shouldn't be relative*/
     /*background-size: 100px 100px;*/
-    background-color: orange;
     /*background-origin: content-box;*/
-    
     /*padding-left: 100px;
     padding-right: 100px;*/
 }
@@ -35,7 +32,6 @@ body {
 /*this is the list dotted*/
 .list_dotted{
     margin-left: 382px;
-    background-color: #F08080;
     margin-bottom: 20px;
 }
 
@@ -49,18 +45,16 @@ p:first-child {
     border: 2px solid blue;
 }
 
-blockquote footer{
-   background-color: #6e7f80;
-   color: white;
-   height: inherit; 
+blockquote footer{ 
 }
 
 footer{
     text-align: center;
     width: 100%;
-    background-color: #536872;
     height: 50px;
     margin-top: 3%;
+    background-color: #5c4b72;
+    color: white;
 }
 
 /* ###########################################################################
@@ -75,7 +69,6 @@ Mobile
     
     footer{
         text-align: center;
-        color: #E7E7E7;
     }
 }
 
