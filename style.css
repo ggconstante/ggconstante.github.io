@@ -5,6 +5,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     background-color: #eeeeee;
+    margin: 0;
 }
 
 .python_website_generator { 
