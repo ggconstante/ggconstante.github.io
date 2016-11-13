@@ -7,9 +7,8 @@ import os
 
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3 class="ging_list">','</h3>'],
-            'Header-center':['<h1 class="python_website_generator">''</div>'
-            '<div id= "python_website_gen"' 
-            'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
+            'Header-center':['<h1 class="python_website_generator">'
+            '<div id="python_website_gen"' 
             'onmouseover = "buttonToRight(this)"> Hover over Me!'
             '</div>', 
             '</h1>'], 
