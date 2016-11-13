@@ -12,27 +12,32 @@ body {
 }
 
 .ging_list { /*this is the Ging's List*/
-    margin-left: 25px;
+    /*margin-left: 25px;*/
+    color: red;
+    text-align: center;
     /*position: fixed;*/
 }
 /*this is Ging's Food list*/
-.gings_foodList {
+.list{
     /*position: fixed;*/ /*Probably shouldn't be relative*/
     /*background-size: 100px 100px;*/
     /*background-origin: content-box;*/
     /*padding-left: 100px;
     padding-right: 100px;*/
+    margin-left: 382px;
+    position: absolute;
 }
 
 .Albertnuts_list { /*this is Albert's nut list*/
-    margin-bottom: 40px;
-    margin-left: 415px;
+    /*margin-bottom: 40px;*/
+    /*margin-left: 415px;*/
     /*margin-right: 100px;*/
+    text-align: center;
 }
 /*this is the list dotted*/
 .list_dotted{
     margin-left: 382px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 p:first-child {
@@ -43,6 +48,13 @@ p:first-child {
 .pp_two {
     font-style: oblique;
     border: 2px solid blue;
+}
+#hideMe{
+    background-color: red;
+}
+
+#click{
+    background-color: orange;
 }
 
 blockquote footer{ 
