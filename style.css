@@ -57,10 +57,27 @@ p:first-child {
     background-color: orange;
 }
 
-blockquote footer{ 
+blockquote, blockquote footer{ 
+    color: #9d92a9;
+    font-size: 24pt;
+    font-weight: 200;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
 }
 
-footer{
+#hideMe{
+    background-color: #ab5757;
+    color: white;
+    font-size: bold;
+    padding: 10px;
+    outline:  1px solid transparent;
+    border: 1px solid #ab5757;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#footer{
     text-align: center;
     width: 100%;
     height: 50px;

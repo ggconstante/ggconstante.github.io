@@ -21,7 +21,7 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'onmouseover = "buttonToRight(this)"> Hover over Me!'
             '</div>', 
             'Quote': ['<blockquote>','</blockquote>'], 
-            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
+            'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
             }
 
@@ -163,18 +163,18 @@ def main():
 
     html_file.write('<!DOCTYPE html>'
                 '<div>'
+<<<<<<< HEAD
                 '<div id ="hideMe"> <p>This Capstone is lit if only I know how to design shit!</p></div>\n'
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
+=======
+                '<div><p>This Capstone is lit if only I know how to design shit!</p></div>\n'
+                '<input  onclick = "showButton();"  id="hideMe" id="click" type="Button" value="Hide"/>'
+>>>>>>> 6bfb1495c9e94a14e7a0c2a109466f8c4d55de89
                 '</div>'
                 )
 
-    # <?php
-    # $time = time();
-    # $actual_time = date('H:i:s', $time);
-    # echo 'The current time is ' .$actual_time;
-    # ?>
-                    
-                # '</div>')
+    footer = '<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
+    html_file.write(footer)
 
     # JS files
     html_file.write('\n\n<!-- JS files -->\n<script src ="capstone.js"></script>\n')
