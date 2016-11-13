@@ -15,7 +15,7 @@ var hideButton = function(){//this is for the hide
 
 var showButton = function(){//this is for the show
         var buttonShow = document.getElementById("click");
-        var divShow = document.getElementById("hideMe");
+        var divShow = document.getElementsByClassName("btn");
             divShow.style.visibility = "visible";
             buttonShow.onclick = hideButton;
             buttonShow.value = "Hide";
