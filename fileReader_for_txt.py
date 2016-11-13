@@ -164,7 +164,7 @@ def main():
 
     html_file.write('<!DOCTYPE html>'
                 '<div>'
-                '<div clas="btn"><p>This Capstone is lit if only I know how to design shit!</p></div>\n'
+                '<div class="btn"><p>This Capstone is lit if only I know how to design shit!</p></div>\n'
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 '</div>'
                 )
