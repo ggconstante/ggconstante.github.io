@@ -47,6 +47,8 @@ p:first-child {
 
 blockquote, blockquote footer{ 
     color: #9d92a9;
+    font-size: 24pt;
+    font-weight: 200;
     text-align: center;
     padding: 20px;
     margin: 0;
