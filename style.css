@@ -48,6 +48,14 @@ p:first-child {
 blockquote footer{ 
 }
 
+.btn{
+    background-color: #9d92a9;
+    color: white;
+    font-size: bold;
+    padding: 10px;
+    outline:  1px solid transparent;
+}
+
 footer{
     text-align: center;
     width: 100%;
