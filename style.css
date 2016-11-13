@@ -46,10 +46,9 @@ p:first-child {
 }
 
 blockquote, blockquote footer{ 
-    background-color: #9d92a9;
-    color: white;
+    color: #9d92a9;
     text-align: center;
-    padding: 0;
+    padding: 20px;
     margin: 0;
 }
 

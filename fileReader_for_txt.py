@@ -22,7 +22,7 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             'List-dotted':['<ul class="list">', '<li class="list_dotted">','<div class="list-cont">','</div', '</li>','</ul>'],'List-number':['<ol class="list">', '<li>', '<div class="list-cont">','</div','</li>','</ol>'], 
             
             'Quote': ['<blockquote>','</blockquote>'], 
-            'Quote-person': ['<blockquote>', '<footer>', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
+            'Quote-person': ['<blockquote>', '<footer>-', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
             }
 
