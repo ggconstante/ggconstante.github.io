@@ -1,5 +1,5 @@
 ## Title
-Static Website
+Sarah's Site
 
 ## Header-center
 Python Website Generator  
@@ -11,10 +11,10 @@ Ging's List
 Chipotle, Obon, Opa, Miss Saigon 
 
 ## Header-small-center
-Albert's nut list
+Sarah's List
 
 ## List-dotted
-Almonds, Cashews, Old Walnuts, Peanuts
+Animals. Panda Express, Family, iPhone
 
 ## PP
 Lorem ipsum dolor sit amet, in diceret equidem percipit mei, et pri soluta aperiri. Eos liber causae id, cu mea quas disputando. No solum vulputate sea, prima inani volumus at nec, inermis adipiscing cum at. Magna causae ea nec.
