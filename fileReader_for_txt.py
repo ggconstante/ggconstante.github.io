@@ -167,7 +167,7 @@ def main():
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 )
 
-    footer = '<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
+    footer = '\n</div>\n<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
     html_file.write(footer)
 
     # JS files
@@ -176,7 +176,7 @@ def main():
 
     # end HTML
 
-    html_file.write('\n</div>\n</body>\n</html>')
+    html_file.write('\n</body>\n</html>')
     html_file.close()
 
     

@@ -1,8 +1,10 @@
 body {
-    width: 85%;
+    width: 100%;
     background-color: #eeeeee;
     margin: 2em;
 }
+
+
 
 #click{
     background-color: #d8c179;
