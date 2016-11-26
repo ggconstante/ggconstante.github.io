@@ -16,8 +16,8 @@ dict_tag = {'Title':['<title>', '</title>'],
             'PP':['<p class="pp_one">','</p>'], 
             'PP-center':['<p class="centered pp_two">', '</p>'],
             'PP-right':['<p class="pp_right">', '</p>'], 
-            'List':['<ul class="list">', '<li>','</li>','</ul>'],
-            'List-dotted':['<ul class="list">', '<li class="list_dotted"></li>','</ul>'],
+            'List':['<ul>', '<li>','</li>','</ul>'],
+            'List-dotted':['<ul>', '<li class="list_dotted"></li>','</ul>'],
             'List-number':['<ol>', '<li>','</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
@@ -79,7 +79,7 @@ def hard_tag(t, c, f):
     elif t.startswith('List'):
         f.write(open_tag)
         list_content = c.split(',')
-
+        print(list_content)
         for i in list_content:
             f.write(new_tag[1] + i.strip() + new_tag[2])
         f.write(close_tag + '\n')
@@ -139,10 +139,6 @@ def main():
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
-                # '<div>'
-                # '<div id ="hideMe" style = "color:blue;"> <p>Click the magic of JavaScript and see what will happen!!!</p></div>\n'
-                # '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
-                # '</div>'
                 )
 
     html_file.write('<div>\n'
@@ -150,7 +146,7 @@ def main():
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 )
 
-    footer = '\n</div>\n<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
+    footer = '\n</div>\n<footer id="footer">\n&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber\n</footer>'
     html_file.write(footer)
 
     # JS files

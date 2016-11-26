@@ -4,12 +4,20 @@ body {
     margin: 2em;
 }
 
+p{
+    width: 90%;
+}
+
 #click{
     background-color: #d8c179;
 }
 
 img{
     width: 40%;
+}
+
+ol, ul{
+    background-color: #9d92a9;
 }
 
 blockquote, blockquote footer{ 
@@ -26,7 +34,6 @@ blockquote, blockquote footer{
     color: white;
     font-size: bold;
     padding: 10px;
-    outline:  1px solid transparent;
     border: 1px solid #ab5757;
     border-radius: 5px;
     cursor: pointer;
