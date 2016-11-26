@@ -118,22 +118,6 @@ def main():
 
     html_file = open("test.html", "w") # open test.html and write to it
 
-
-    # # HTML file header
-    # html_file.write('<!DOCTYPE html>\n<html>\n<head>\n'
-    #                 '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
-    #                 '<link rel="stylesheet" type="text/css" href="style.css">\n</head>\n'
-    #                 '<script src ="capstone.js"></script>\n'
-    #                 # '<body><h1 class="python_website">Python Website</h1>\n'
-    #                 # '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
-    #                 # 'Useless people</a>\n'
-    #                 # '<div>'
-    #                 # '<div id="fontIncrease"><p>Enlarge me Darling!!!</p></div>'
-    #                 # '<!-- this is to increase the font size--><button onclick="increaseButton();"><center>Capstoned!!</center></button>'
-    #                 # '</div>'
-    #                 )
-
-
     # look for tag identifiers
     for everyline in lines:
         everyline = everyline.strip('\n') # this will remove the extra spaces between lines
