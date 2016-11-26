@@ -8,58 +8,8 @@ body {
     margin: 0;
 }
 
-.python_website_generator { 
-   position:relative;
-   width: 400px;
-   height:100px;
-   left:8px;
-   text-align:center;
-}
-
-.ging_list { /*this is the Ging's List*/
-    /*margin-left: 25px;*/
-    color: red;
-    text-align: center;
-    /*position: fixed;*/
-}
-/*this is Ging's Food list*/
-.list{
-    /*position: fixed;*/ /*Probably shouldn't be relative*/
-    /*background-size: 100px 100px;*/
-    /*background-origin: content-box;*/
-    /*padding-left: 100px;
-    padding-right: 100px;*/
-    margin-left: 382px;
-    position: absolute;
-}
-
-.Albertnuts_list { /*this is Albert's nut list*/
-    /*margin-bottom: 40px;*/
-    /*margin-left: 415px;*/
-    /*margin-right: 100px;*/
-    text-align: center;
-}
-/*this is the list dotted*/
-.list_dotted{
-    margin-left: 382px;
-    /*margin-bottom: 20px;*/
-}
-
-p:first-child {
-    font-style: italic;
-    border: 1px solid red;
-}
-
-.pp_two {
-    font-style: oblique;
-    border: 2px solid blue;
-}
-#hideMe{
-    background-color: red;
-}
-
 #click{
-    background-color: orange;
+    background-color: #d8c179;
 }
 
 blockquote, blockquote footer{ 
@@ -92,7 +42,7 @@ blockquote, blockquote footer{
 }
 
 /* ###########################################################################
-Mobile 
+                                Mobile 
 ###########################################################################*/
 
 @media screen and (max-width:480px){
@@ -107,7 +57,7 @@ Mobile
 }
 
 /* ###########################################################################
-Small Tablet
+                                Small Tablet
 ###########################################################################*/
 @media screen and (min-width:481px) and (max-width:768px) {
     .content{
@@ -117,7 +67,7 @@ Small Tablet
 
 
 /* ###########################################################################
-Large Tablet
+                                Large Tablet
 ###########################################################################*/
 @media screen and (min-width:769px) and (max-width:1024px){
     
@@ -128,7 +78,7 @@ Large Tablet
 
 
 /* ###########################################################################
-Desktop
+                                Desktop
 ###########################################################################*/
 
 @media screen and (min-width:1025px){    
