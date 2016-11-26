@@ -9,7 +9,7 @@ dict_tag = {'Title':['<title>', '</title>'],
             'Header': ['<h1>','</h1>'],
             'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3>','</h3>'],
-            'Header-center':['<h1 class="centered">', 'onmouseover = "buttonToRight(this)"> Hover over Me!', '</h1>'], 
+            'Header-center':['<h1 class="centered" onmouseover = "buttonToRight(this)">Hover over Me!', '</h1>'], 
             'Header-medium-center':['<h2 class="centered">', '</h2>'],
             'Header-small-center':['<h3 class="centered">', '</h3>'],
             'Link':['<a href="', '">', '</a>'],
@@ -18,7 +18,7 @@ dict_tag = {'Title':['<title>', '</title>'],
             'PP-right':['<p class="pp_right">', '</p>'], 
             'List':['<ul class="list">', '<li>','<div class="list-cont">','</div', '</li>','</ul>'],
             'List-dotted':['<ul class="list">', '<li class="list_dotted"></li>','</ul>'],
-            'List-number':['<ol>', '<li class="gings_foodList">','</li>','</ol>'], 
+            'List-number':['<ol>', '<li>','</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
@@ -79,9 +79,6 @@ def hard_tag(t, c, f):
     elif t.startswith('List'):
         f.write(open_tag)
         list_content = c.split(',')
-
-        # div container tags
-        # start_cont, end_cont = new_tag[2], new_tag[3]
 
         for i in list_content:
             f.write(new_tag[1] + i.strip() + new_tag[2])
@@ -154,7 +151,7 @@ def main():
     tweets(html_file)            
 
     # Extras
-    html_file.write('<!DOCTYPE html><p class="center"><strong>Hello Capstone 2016</strong></p>\n'
+    html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
                 'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
