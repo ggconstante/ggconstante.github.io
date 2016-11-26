@@ -17,7 +17,7 @@ dict_tag = {'Title':['<title>', '</title>'],
             'PP-center':['<p class="centered pp_two">', '</p>'],
             'PP-right':['<p class="pp_right">', '</p>'], 
             'List':['<ul>', '<li>','</li>','</ul>'],
-            'List-dotted':['<ul>', '<li class="list_dotted"></li>','</ul>'],
+            'List-dotted':['<ul class="list_dotted">', '<li>', '</li>','</ul>'],
             'List-number':['<ol>', '<li>','</li>','</ol>'], 
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
@@ -79,7 +79,7 @@ def hard_tag(t, c, f):
     elif t.startswith('List'):
         f.write(open_tag)
         list_content = c.split(',')
-        print(list_content)
+
         for i in list_content:
             f.write(new_tag[1] + i.strip() + new_tag[2])
         f.write(close_tag + '\n')
