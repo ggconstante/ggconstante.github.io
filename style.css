@@ -4,8 +4,6 @@ body {
     margin: 2em;
 }
 
-
-
 #click{
     background-color: #d8c179;
 }
@@ -49,23 +47,14 @@ blockquote, blockquote footer{
 ###########################################################################*/
 
 @media screen and (max-width:480px){
-    main{
-        margin-top: 2em;
-        padding: 3px;
-    }
-    
-    footer{
-        text-align: center;
-    }
+
 }
 
 /* ###########################################################################
                                 Small Tablet
 ###########################################################################*/
 @media screen and (min-width:481px) and (max-width:768px) {
-    .content{
-        padding: 0 10%;
-    }
+
 }
 
 
@@ -74,9 +63,6 @@ blockquote, blockquote footer{
 ###########################################################################*/
 @media screen and (min-width:769px) and (max-width:1024px){
     
-    .content{
-        padding: 0 10%;
-    }
 }
 
 
@@ -85,7 +71,5 @@ blockquote, blockquote footer{
 ###########################################################################*/
 
 @media screen and (min-width:1025px){    
-    .content{
-        padding: 0 15%;
-    }
+
 }
