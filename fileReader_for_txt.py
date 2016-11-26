@@ -165,9 +165,6 @@ def main():
                 '<div>'
                 '<div id ="hideMe"> <p>This Capstone is lit if only I know how to design shit!</p></div>\n'
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
-                '<div><p>This Capstone is lit if only I know how to design shit!</p></div>\n'
-                '<input  onclick = "showButton();"  id="hideMe" id="click" type="Button" value="Hide"/>'
-                '</div>'
                 )
 
     footer = '<footer id="footer">\n\t<div>&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber</div>\n</footer>'
