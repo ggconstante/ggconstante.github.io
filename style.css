@@ -9,8 +9,16 @@ body {
 }
 
 .python_website_generator { 
+<<<<<<< HEAD
    text-align: center;
    background-color: red;
+=======
+   position:relative;
+   width: 400px;
+   height:100px;
+   left:8px;
+   text-align:center;
+>>>>>>> 53085ea97f8b77ce522355e720e1861b14ed9717
 }
 
 .ging_list { /*this is the Ging's List*/

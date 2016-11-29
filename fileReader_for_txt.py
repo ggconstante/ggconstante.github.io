@@ -7,7 +7,9 @@ import os
 
 dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3 class="ging_list">','</h3>'],
-            'Header-center':['<h1 class="python_website_generator">''</div>'
+            
+            'Header-center':['<h1 class="python_website_generator">', 
+            'onmouseover = "buttonToRight(this)"> Hover over Me!' 
             '</h1>'], 
             'Header-medium-center':['<h2 class="centered">', '</h2>'],
             'Header-small-center':['<h3 class="Albertnuts_list">', '</h3>'],'Link':['<a href="', '">', '</a>'],
@@ -16,10 +18,10 @@ dict_tag = {'Title':['<title>', '</title>'],'Header': ['<h1>','</h1>'],'Header-m
             
             'List':['<ul class="list">', '<li>','<div class="list-cont">','</div', '</li>','</ul>'],
             'List-dotted':['<ul class="list">', '<li class="list_dotted"></li>','</ul>'],'List-number':['<ol>', '<li class="gings_foodList">','</li>','</ol>'], 
-            '<div id= "python_website_gen"' 
-            'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
-            'onmouseover = "buttonToRight(this)"> Hover over Me!'
-            '</div>', 
+            # '<div id= "python_website_gen"' 
+            # 'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
+            # 'onmouseover = "buttonToRight(this)"> Hover over Me!'
+            # '</div>' 
             'Quote': ['<blockquote>','</blockquote>'], 
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
@@ -78,7 +80,7 @@ def hard_tag(t, c, f):
         list_content = c.split(',')
 
         # div container tags
-        start_cont, end_cont = new_tag[2], new_tag[3]
+        # start_cont, end_cont = new_tag[2], new_tag[3]
 
         for i in list_content:
             f.write(new_tag[1] + i.strip() + new_tag[2])
@@ -163,13 +165,10 @@ def main():
 
     html_file.write('<!DOCTYPE html>'
                 '<div>'
-<<<<<<< HEAD
                 '<div id ="hideMe"> <p>This Capstone is lit if only I know how to design shit!</p></div>\n'
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
-=======
                 '<div><p>This Capstone is lit if only I know how to design shit!</p></div>\n'
                 '<input  onclick = "showButton();"  id="hideMe" id="click" type="Button" value="Hide"/>'
->>>>>>> 6bfb1495c9e94a14e7a0c2a109466f8c4d55de89
                 '</div>'
                 )
 
