@@ -1,8 +1,8 @@
 ## Title
-Static Website
+Python Website Generator 
 
 ## Header-center
-Python Website Generator  
+Capstone Project 
 
 ## Header-small
 Ging's List
@@ -11,10 +11,10 @@ Ging's List
 Chipotle, Obon, Opa, Miss Saigon 
 
 ## Header-small-center
-Albert's nut list
+Albert's Nut List
 
 ## List-dotted
-Almonds, Cashews, Old Walnuts, Peanuts
+Almonds, Old Walnits, Peanuts, Cashews
 
 ## PP
 Lorem ipsum dolor sit amet, in diceret equidem percipit mei, et pri soluta aperiri. Eos liber causae id, cu mea quas disputando. No solum vulputate sea, prima inani volumus at nec, inermis adipiscing cum at. Magna causae ea nec.

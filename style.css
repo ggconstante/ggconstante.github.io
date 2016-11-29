@@ -1,10 +1,7 @@
 body {
-    position: relative;
-    font-style: normal;
-    font-size: 16px;
     width: 100%;
-    overflow-x: hidden;
     background-color: #eeeeee;
+<<<<<<< HEAD
     margin: 0;
 }
 
@@ -19,52 +16,25 @@ body {
    left:8px;
    text-align:center;
 >>>>>>> 53085ea97f8b77ce522355e720e1861b14ed9717
+=======
+    margin: 2em;
+>>>>>>> 738b7917f922663a0683619d068ed5b07ab4bca6
 }
 
-.ging_list { /*this is the Ging's List*/
-    /*margin-left: 25px;*/
-    color: red;
-    text-align: center;
-    /*position: fixed;*/
-}
-/*this is Ging's Food list*/
-.list{
-    /*position: fixed;*/ /*Probably shouldn't be relative*/
-    /*background-size: 100px 100px;*/
-    /*background-origin: content-box;*/
-    /*padding-left: 100px;
-    padding-right: 100px;*/
-    margin-left: 382px;
-    position: absolute;
-}
-
-.Albertnuts_list { /*this is Albert's nut list*/
-    /*margin-bottom: 40px;*/
-    /*margin-left: 415px;*/
-    /*margin-right: 100px;*/
-    text-align: center;
-}
-/*this is the list dotted*/
-.list_dotted{
-    margin-left: 382px;
-    /*margin-bottom: 20px;*/
-}
-
-p:first-child {
-    font-style: italic;
-    border: 1px solid red;
-}
-
-.pp_two {
-    font-style: oblique;
-    border: 2px solid blue;
-}
-#hideMe{
-    background-color: red;
+p{
+    width: 90%;
 }
 
 #click{
-    background-color: orange;
+    background-color: #d8c179;
+}
+
+img{
+    width: 40%;
+}
+
+ol, ul{
+    background-color: #9d92a9;
 }
 
 blockquote, blockquote footer{ 
@@ -81,7 +51,6 @@ blockquote, blockquote footer{
     color: white;
     font-size: bold;
     padding: 10px;
-    outline:  1px solid transparent;
     border: 1px solid #ab5757;
     border-radius: 5px;
     cursor: pointer;
@@ -91,53 +60,40 @@ blockquote, blockquote footer{
     text-align: center;
     width: 100%;
     height: 50px;
-    margin-top: 3%;
+    margin: 2em 0 -2em -2em;
+    padding-top: 1em;
     background-color: #5c4b72;
     color: white;
 }
 
 /* ###########################################################################
-Mobile 
+                                Mobile 
 ###########################################################################*/
 
 @media screen and (max-width:480px){
-    main{
-        margin-top: 2em;
-        padding: 3px;
-    }
-    
-    footer{
-        text-align: center;
-    }
+
 }
 
 /* ###########################################################################
-Small Tablet
+                                Small Tablet
 ###########################################################################*/
 @media screen and (min-width:481px) and (max-width:768px) {
-    .content{
-        padding: 0 10%;
-    }
+
 }
 
 
 /* ###########################################################################
-Large Tablet
+                                Large Tablet
 ###########################################################################*/
 @media screen and (min-width:769px) and (max-width:1024px){
     
-    .content{
-        padding: 0 10%;
-    }
 }
 
 
 /* ###########################################################################
-Desktop
+                                Desktop
 ###########################################################################*/
 
 @media screen and (min-width:1025px){    
-    .content{
-        padding: 0 15%;
-    }
+
 }
