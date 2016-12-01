@@ -55,6 +55,7 @@ blockquote, blockquote footer{
 
 .twitter-timeline{
     max-height: 600px;
+    max-width: 800px;
     overflow-y: scroll;
 }
 
