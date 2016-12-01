@@ -8,8 +8,19 @@ p{
     width: 90%;
 }
 
-#click{
+a{
+    color: #000;
+    transition: 1s ease;
+}
+
+#click, button, a:hover{
     background-color: #d8c179;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #d8c179;
+    border-radius: 5px;
+    margin: 1em 0;
+    cursor: pointer;
 }
 
 img{
