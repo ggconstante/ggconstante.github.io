@@ -1,7 +1,24 @@
 body {
     width: 100%;
     background-color: #eeeeee;
+<<<<<<< HEAD
+    margin: 0;
+}
+
+.python_website_generator { 
+<<<<<<< HEAD
+   text-align: center;
+   background-color: red;
+=======
+   position:relative;
+   width: 400px;
+   height:100px;
+   left:8px;
+   text-align:center;
+>>>>>>> 53085ea97f8b77ce522355e720e1861b14ed9717
+=======
     margin: 2em;
+>>>>>>> 738b7917f922663a0683619d068ed5b07ab4bca6
 }
 
 p{
