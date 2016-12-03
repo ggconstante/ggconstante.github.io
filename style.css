@@ -5,33 +5,20 @@ body {
 }
 
 .python_website_generator { 
-<<<<<<< HEAD
-
-   text-align: center;
-   background-color: red;
-=======
    text-align: center;
    background-color: red;
    text-align: center;
-   background-color: red;
->>>>>>> 0ce9f6732b13bc7bc4ab939fc513e19f851d9e20
    position:relative;
    width: 400px;
    height:100px;
    left:8px;
    text-align:center;
-<<<<<<< HEAD
    margin: 2em;
-=======
-    margin: 2em;
->>>>>>> 0ce9f6732b13bc7bc4ab939fc513e19f851d9e20
 }
 
 p{
     width: 90%;
 }
-
-<<<<<<< HEAD
 
 #fontIncrease{
     background-color: #ab5757;
@@ -45,7 +32,6 @@ p{
     background-color: #d8c179;
     padding: 5px;
 
-=======
 a{
     color: #000;
     transition: 1s ease;
@@ -59,7 +45,6 @@ a{
     border-radius: 5px;
     margin: 1em 0;
     cursor: pointer;
->>>>>>> 0ce9f6732b13bc7bc4ab939fc513e19f851d9e20
 }
 
 img{
@@ -68,6 +53,9 @@ img{
 
 ol, ul{
     background-color: #9d92a9;
+    width: 20%;
+    border-radius: 10px;
+    margin-left: 2%;
 }
 
 blockquote, blockquote footer{ 
