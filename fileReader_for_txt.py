@@ -9,7 +9,7 @@ dict_tag = {'Title':['<title>', '</title>'],
             'Header': ['<h1>','</h1>'],
             'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3>','</h3>'],
-            'Header-center':['<h1 class="centered">', 'onmouseover = "buttonToRight(this)"> Hover over Me!', '</h1>'], 
+            'Header-center':['<h1 class="centered">', '</h1>'], 
             'Header-medium-center':['<h2 class="centered">', '</h2>'],
             'Header-small-center':['<h3 class="centered">', '</h3>'],
             'Link':['<a href="', '">', '</a>'],
@@ -23,10 +23,6 @@ dict_tag = {'Title':['<title>', '</title>'],
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
             }
-            # '<div id= "python_website_gen"' 
-            # 'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
-            # 'onmouseover = "buttonToRight(this)"> Hover over Me!'
-            # '</div>' 
 
 hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']  
 
@@ -116,7 +112,7 @@ def main():
     lines = file.readlines() # readlines will process each line separately 
     file.close() # close file
 
-    html_file = open("test.html", "w") # open test.html and write to it
+    html_file = open("index.html", "w") # open test.html and write to it
 
     # look for tag identifiers
     for everyline in lines:
@@ -156,9 +152,7 @@ def main():
     # end HTML
 
     html_file.write('\n</body>\n</html>')
-    html_file.close()
-
-    
+    html_file.close()    
 
     # Adds files and uploads to GitHub for live hosting FOR MAC OS ONLY
     if os.name == 'posix':
@@ -167,7 +161,6 @@ def main():
         os.system("git push")
     else:
         return
-
 
 
 if __name__ == "__main__":
