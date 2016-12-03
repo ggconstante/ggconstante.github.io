@@ -9,7 +9,7 @@ dict_tag = {'Title':['<title>', '</title>'],
             'Header': ['<h1>','</h1>'],
             'Header-medium':['<h2>','</h2>'],
             'Header-small':['<h3>','</h3>'],
-            'Header-center':['<h1 class="centered">', 'onmouseover = "buttonToRight(this)"> Hover over Me!', '</h1>'], 
+            'Header-center':['<h1 class="centered">', '</h1>'], 
             'Header-medium-center':['<h2 class="centered">', '</h2>'],
             'Header-small-center':['<h3 class="centered">', '</h3>'],
             'Link':['<a href="', '">', '</a>'],
@@ -161,7 +161,6 @@ def main():
         os.system("git push")
     else:
         return
-
 
 
 if __name__ == "__main__":
