@@ -23,10 +23,6 @@ dict_tag = {'Title':['<title>', '</title>'],
             'Quote-person': ['<blockquote>', '<footer>- ', '</footer>', '</blockquote>'], 'Image':['<img src="', '"\>'],
             'Image':['<img src="', '"/>']
             }
-            # '<div id= "python_website_gen"' 
-            # 'style = "position:relative; width: 400px; height:100px; left:8px; text-align:center;"'
-            # 'onmouseover = "buttonToRight(this)"> Hover over Me!'
-            # '</div>' 
 
 hard_tags = ['List','List-dotted','List-number','Quote-person', 'Link']  
 
@@ -156,9 +152,7 @@ def main():
     # end HTML
 
     html_file.write('\n</body>\n</html>')
-    html_file.close()
-
-    
+    html_file.close()    
 
     # Adds files and uploads to GitHub for live hosting FOR MAC OS ONLY
     if os.name == 'posix':
