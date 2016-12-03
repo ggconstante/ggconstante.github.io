@@ -116,7 +116,7 @@ def main():
     lines = file.readlines() # readlines will process each line separately 
     file.close() # close file
 
-    html_file = open("test.html", "w") # open test.html and write to it
+    html_file = open("index.html", "w") # open test.html and write to it
 
     # look for tag identifiers
     for everyline in lines:
