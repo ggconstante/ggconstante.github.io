@@ -28,16 +28,12 @@ p{
     cursor: pointer;
 }
 
-#capstone{
-    background-color: #d8c179;
-    padding: 5px;
-
 a{
     color: #000;
     transition: 1s ease;
 }
 
-#click, button, a:hover{
+#capstone, #click, button, a:hover{
     background-color: #d8c179;
     padding: 10px;
     font-weight: bold;
@@ -56,6 +52,8 @@ ol, ul{
     width: 20%;
     border-radius: 10px;
     margin-left: 2%;
+    padding: 20px 0;
+    padding-left: 40px;
 }
 
 blockquote, blockquote footer{ 
