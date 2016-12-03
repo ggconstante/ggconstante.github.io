@@ -1,32 +1,38 @@
 body {
     width: 100%;
     background-color: #eeeeee;
-<<<<<<< HEAD
     margin: 0;
 }
 
 .python_website_generator { 
-<<<<<<< HEAD
+
    text-align: center;
    background-color: red;
-=======
    position:relative;
    width: 400px;
    height:100px;
    left:8px;
    text-align:center;
->>>>>>> 53085ea97f8b77ce522355e720e1861b14ed9717
-=======
-    margin: 2em;
->>>>>>> 738b7917f922663a0683619d068ed5b07ab4bca6
+   margin: 2em;
 }
 
 p{
     width: 90%;
 }
 
-#click{
+
+#fontIncrease{
+    background-color: #ab5757;
+    color: white;
+    border: 1px solid #ab5757;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#capstone{
     background-color: #d8c179;
+    padding: 5px;
+
 }
 
 img{
@@ -50,10 +56,13 @@ blockquote, blockquote footer{
     background-color: #ab5757;
     color: white;
     font-size: bold;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ab5757;
     border-radius: 5px;
     cursor: pointer;
+}
+#click{
+    background-color: #d8c179;
 }
 
 #footer{

@@ -137,8 +137,8 @@ def main():
     # Extras
     html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                 '<a href="http://www.cnn.com/2016/09/26/politics/live-updates-trump-clinton-debate/" class="center">'
-                'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p><center>Enlarge me Darling!!!</center></p>\n</div>\n'
-                '<!-- this is to increase the font size-->\n<button onclick="increaseButton();"><center>Capstoned!!</center></button>\n'
+                'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p>Enlarge me Darling!!!</p>\n</div>\n'
+                '<!-- this is to increase the font size-->\n<button onclick="increaseButton();" id = "capstone" >Capstoned!!</button>\n'
                 )
 
     html_file.write('<div>\n'
