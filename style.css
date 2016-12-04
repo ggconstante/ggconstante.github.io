@@ -77,7 +77,7 @@ blockquote, blockquote footer{
     margin: 0;
 }
 
-.twitter-timeline{
+.timeline-Widget{
     max-height: 60%;
     max-width: 10%;
     overflow-y: scroll;
