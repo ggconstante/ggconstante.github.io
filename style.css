@@ -13,6 +13,9 @@ h1{
 p{
     width: 90%;
     margin: 1em;
+    text-align: justify;
+    letter-spacing: 3px;
+    text-indent: 40px;
 }
 
 a{
@@ -56,6 +59,12 @@ ol, ul{
     padding-left: 40px;
     font-weight: bold;
     margin: 1em;
+}
+#hideMe{
+    text-align: center;
+}
+#lit{
+    color:#5c4b72;
 }
 
 blockquote, blockquote footer{ 
