@@ -43,6 +43,7 @@ a{
 img{
     width: 40%;
     margin: 1em;
+    margin-left: 30%;
 }
 
 ol, ul{
@@ -104,6 +105,7 @@ blockquote, blockquote footer{
 
     img{
         width: 80%;
+        margin-left: 10%;
     }
 
     #hideMe, #fontIncrease{
@@ -125,6 +127,7 @@ blockquote, blockquote footer{
 
     img{
         width: 70%;
+        margin-left: 10%;
     }
 
     #hideMe, #fontIncrease{
@@ -145,6 +148,7 @@ blockquote, blockquote footer{
 
     img{
         width: 50%;
+        margin-left: 20%;
     }
 
     #hideMe, #fontIncrease{
