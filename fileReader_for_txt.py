@@ -96,7 +96,7 @@ def tweets(f):
     if askTwitter.lower() == 'y':
         account = input('If your twitter account name is @Bob124, enter Bob124\nPlease enter a public twitter account name:')
         # if account not valid....
-        f.write('<a class="twitter-timeline" href="https://twitter.com/' + account + '">'
+        f.write('<a class="twitter-timeline" data-height="500" href="https://twitter.com/' + account + '">'
             'Tweets by ' + account + '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>')
     else:
         return
