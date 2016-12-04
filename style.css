@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 
-.python_website_generator { 
+/*.python_website_generator { 
    text-align: center;
    background-color: red;
    text-align: center;
@@ -14,10 +14,12 @@ body {
    left:8px;
    text-align:center;
    margin: 2em;
-}
+}*/
 
-div#wrapper:nth-child(2){
-    /*background-color: #5c4b72;*/
+h1{
+    margin-left: 35%;
+    border: 10px inset #5c4b72;
+    width: 370px;
 }
 
 p{
@@ -99,6 +101,10 @@ blockquote, blockquote footer{
 
 @media screen and (max-width:480px){
 
+    h1{
+        margin-left: 1%;
+    }   
+
     ol, ul, #hideMe, #fontIncrease{
         width: 80%;
     }
@@ -114,6 +120,9 @@ blockquote, blockquote footer{
 ###########################################################################*/
 @media screen and (min-width:481px) and (max-width:768px) {
 
+    h1{
+        margin-left: 20%;
+    }    
 
     ol, ul, #hideMe, #fontIncrease{
         width: 70%;
@@ -132,6 +141,10 @@ blockquote, blockquote footer{
 ###########################################################################*/
 @media screen and (min-width:769px) and (max-width:1024px){
     
+    h1{
+        margin-left: 30%;
+    }    
+
     ol, ul, #hideMe, #fontIncrease{
         width: 50%;
     }
