@@ -78,8 +78,8 @@ blockquote, blockquote footer{
 }
 
 .timeline-Widget{
-    max-height: 60%;
-    max-width: 10%;
+    max-height: 500px !important;
+    width: 50% !important;
     overflow-y: scroll;
 }
 
