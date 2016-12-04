@@ -99,20 +99,14 @@ blockquote, blockquote footer{
 
 @media screen and (max-width:480px){
 
-    ol, ul{
+    ol, ul, #hideMe, #fontIncrease{
         width: 80%;
     }
-
 
     img{
         width: 80%;
         margin-left: 10%;
     }
-
-    #hideMe, #fontIncrease{
-    width: 80%;
-    }
-
 }
 
 /* ###########################################################################
@@ -121,7 +115,7 @@ blockquote, blockquote footer{
 @media screen and (min-width:481px) and (max-width:768px) {
 
 
-    ol, ul{
+    ol, ul, #hideMe, #fontIncrease{
         width: 70%;
     }
 
@@ -129,10 +123,6 @@ blockquote, blockquote footer{
     img{
         width: 70%;
         margin-left: 10%;
-    }
-
-    #hideMe, #fontIncrease{
-    width: 70%;
     }
 }
 
@@ -142,18 +132,13 @@ blockquote, blockquote footer{
 ###########################################################################*/
 @media screen and (min-width:769px) and (max-width:1024px){
     
-    ol, ul{
+    ol, ul, #hideMe, #fontIncrease{
         width: 50%;
     }
-
 
     img{
         width: 50%;
         margin-left: 20%;
-    }
-
-    #hideMe, #fontIncrease{
-    width: 50%;
     }
 }
 
@@ -164,17 +149,8 @@ blockquote, blockquote footer{
 
 @media screen and (min-width:1025px){    
 
-    ol, ul{
+    ol, ul, img, #hideMe, #fontIncrease, #twitter-widget-0{
         width: 40%;
-    }
-
-
-    img{
-        width: 40%;
-    }
-
-    #hideMe, #fontIncrease{
-    width: 40%;
     }
 
 }
