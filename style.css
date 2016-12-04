@@ -82,7 +82,7 @@ blockquote, blockquote footer{
 #twitter-widget-0{
     max-height: 500px !important;
     width: 50% !important;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 #footer{
