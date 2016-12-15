@@ -142,6 +142,7 @@ def main():
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 )
 
+
     footer = '\n</div>\n<footer id="footer">\n&copy; 2016 | Design by Gingrefel Constante &amp; Albert Reiber\n</footer>'
     html_file.write(footer)
 
