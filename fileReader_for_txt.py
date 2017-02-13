@@ -133,7 +133,7 @@ def main():
     # Extras
     html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                 '<a href="http://www.arizona.edu/" class="center">'
-                'Useless people</a>\n<div>\n<div id="fontIncrease">\n<p>Make me Intense!!!</p>\n</div>\n'
+                'Randomness</a>\n<div>\n<div id="fontIncrease">\n<p>Make me Intense!!!</p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();" id = "capstone" >Capstoned!!</button>\n'
                 )
 

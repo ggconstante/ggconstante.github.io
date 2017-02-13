@@ -1,0 +1,165 @@
+/* laptop/browsers */
+
+body 
+{ 
+   width: 1080px; 
+   margin:0 auto; 
+   padding: 50px 0; 
+   color: #333333; 
+   font-family: Georgia,"Times New Roman",sans-serif; 
+   height: 100%; 
+   min-height: 100%; 
+   line-height: 1em; 
+} 
+  
+#pageWrapper 
+{ 
+    background-color:#FFFFFF; 
+    height: 100%; 
+    margin: 0 auto; 
+    position: relative; 
+    width: 100%;    
+} 
+  
+#header 
+{ 
+   float: left; 
+   width: 160px; 
+}     
+#logo 
+{ 
+   background-image:url('../imgs/logo.png'); 
+   background-repeat:no-repeat; 
+   width:112px; 
+   height:112px; 
+   text-indent:-10000px; 
+} 
+  
+#nav 
+{ 
+   left: 0; 
+   position: absolute; 
+   top: 158px; 
+   width: 160px; 
+} 
+  
+#nav ul 
+{ 
+   list-style-type:none; 
+} 
+  
+#nav li 
+{ 
+   display: block; 
+   line-height: 1.3em; 
+   margin-bottom: 18px; 
+} 
+  
+#nav li a 
+{ 
+   color: #a00; 
+   text-decoration:none; 
+   display: block; 
+   font-style: italic; 
+} 
+  
+#slide 
+{ 
+   position:relative; 
+   width:896px; 
+   padding-bottom:10px; 
+   overflow:hidden; 
+} 
+  
+#recent 
+{ 
+   clear: both; 
+   margin-left: 160px; 
+   margin-bottom: 18px; 
+   overflow: hidden; 
+   width: 920px; 
+} 
+  
+#recent div 
+{ 
+   float: left; 
+   margin: 0 24px 25px 0; 
+   width: 206px; 
+} 
+  
+#recent div a 
+{ 
+   color: #036; 
+   text-decoration: none; 
+} 
+  
+#recent div img 
+{ 
+   padding: 9px 0; 
+   width: 185px; 
+   height: auto; 
+} 
+  
+#recent div h1
+{ 
+   font-size:1em; 
+   line-height: 1.3em; 
+   margin: 10px 0; 
+} 
+  
+#recent div p 
+{ 
+   font-size: 0.875em; 
+   line-height: 1.45em; 
+} 
+  
+#recent div a.readMore 
+{ 
+   color: #aaa; 
+   margin-top: 10px; 
+} 
+  
+#social 
+{ 
+   position: absolute; 
+   top: 470px; 
+   left: 0; 
+   width: 160px
+} 
+  
+#social ul 
+{ 
+   list-style-type:none; 
+} 
+  
+#social li 
+{ 
+   margin-bottom:5px; 
+} 
+  
+#social li a 
+{ 
+   display:block; 
+   width:95px; 
+   height:26px; 
+   text-indent:-10000px; 
+   background-image:url('../imgs/social.png'); 
+   background-repeat:no-repeat; 
+} 
+  
+.facebook {background-position:0 0;} 
+.twitter {background-position:-98px 0;} 
+.youtube {background-position:-196px 0;} 
+.foursquare {background-position:-294px 0;} 
+.ualert {background-position:0 -27px;} 
+.uamobile {background-position:-98px -27px;} 
+.givenow {background-position:-196px -27px;} 
+.uagreen {background-position:-294px -27px;} 
+  
+#footer 
+{ 
+   text-align:center; 
+   font-style:italic; 
+   color:#666; 
+   font-size:.9em; 
+}
