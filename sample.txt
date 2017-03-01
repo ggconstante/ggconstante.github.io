@@ -11,7 +11,7 @@ Ging's List
 Chipotle, Obon, Opa, Miss Saigon 
 
 ## Header-small-center
-Albert's nut list
+Albert's list
 
 ## List-dotted
 Almonds, Cashews, Old Walnuts, Peanuts
@@ -35,7 +35,7 @@ I want to leave in the worst possible way so I could come home to see you But: T
 Ging
 
 ## PP
-Ging is a total badass. He will beat you at basketball.
+Ging loves to play basketball.
 
 ## Image
 kitty.jpg

@@ -133,12 +133,12 @@ def main():
     # Extras
     html_file.write('<p class="center"><strong>Hello Capstone 2016</strong></p>\n'
                 '<a href="http://www.arizona.edu/" class="center">'
-                'Randomness</a>\n<div>\n<div id="fontIncrease">\n<p>Make me Intense!!!</p>\n</div>\n'
+                'Randomness</a>\n<div>\n<div id="fontIncrease">\n<p>Make this string bigger/larger</p>\n</div>\n'
                 '<!-- this is to increase the font size-->\n<button onclick="increaseButton();" id = "capstone" >Capstoned!!</button>\n'
                 )
 
     html_file.write('<div>\n'
-                '<div id ="hideMe"> <p>This Capstone is <strong>LIT!</strong></p></div>\n'
+                '<div id ="hideMe"> <p>Simple Javascript<strong>manipulation!</strong></p></div>\n'
                 '<input  onclick = "showButton();"  id = "click" type ="Button" value = "Hide"/>'
                 )
 
